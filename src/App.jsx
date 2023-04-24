@@ -5,14 +5,22 @@ import SeeMoreButton from "./components/SeeMoreButton";
 import Switch from "./components/Switch";
 
 function App() {
-    // da det er app elementet der renderes, opsættes hele strukturen inde i diven med className="app"
+  // da det er app elementet der renderes, opsættes hele strukturen inde i diven med className="app"
 
   return (
     <div className="App">
       <header className="gridContainer">
-       <h1 style={{fontSize: "16px", justifySelf: "center"}}>My Movies</h1>
-                {/* Sådan ser et komponent ud når det bruges i React */}
-                <Switch />
+        <h1
+          style={{
+            fontSize: "16px",
+            justifySelf: "center",
+            gridColumnStart: 2,
+          }}
+        >
+          My Movies
+        </h1>
+        {/* Sådan ser et komponent ud når det bruges i React */}
+        <Switch />
       </header>
       <main>
         <section>
