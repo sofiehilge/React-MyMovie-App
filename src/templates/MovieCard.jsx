@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Image from "../components/Image";// Image navnet er ligemeget, men det skal hedde det samme i import og i component tagget.
-import Heading3 from "../components/HeadingThree";
+import Heading from "../components/Heading";
 import MovieRating from "../components/MovieRating";
 
 const StyledArticle = styled.article`
@@ -16,7 +16,7 @@ const MovieCard = () => {
       <figure>
         <Image />
       </figure>
-      <Heading3 />
+      <Heading text="Movie name" size="14px" type="h3" />
       <MovieRating />
     </StyledArticle>
   );

@@ -1,7 +1,6 @@
 import "./App.css";
-import HeadingOne from "./components/HeadingOne";
+import Heading from "./components/Heading";
 import MovieCard from "./templates/MovieCard";
-import HeadingTwo from "./components/HeadingTwo";
 import SeeMoreButton from "./components/SeeMoreButton";
 
 function App() {
@@ -10,13 +9,13 @@ function App() {
   return (
     <div className="App">
       <header className="gridContainer">
-        <HeadingOne />
+        <Heading text="MyMovies" size="16px" type="h1"/>
                 {/* Sådan ser et komponent ud når det bruges i React */}
       </header>
       <main>
         <section>
           <div className="flexContainer space-between">
-            <HeadingTwo />
+            <Heading text="Now Showing" size="16px" type="h2"/>
             <SeeMoreButton />
           </div>
           <div className="flexContainer movieCardContainer">

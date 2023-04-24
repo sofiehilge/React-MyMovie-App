@@ -144,3 +144,32 @@ TIPS:
 -- For ikke at skrive component functionen hele tiden, har vi installeret et plugin og kan nu skrive SFC, som hjælper os med at skrive hele functionen automatisk
 
 -- vi henter REACT Icons ned med npm, da den åbner for ikoner fra flere biblioteker.
+
+GØR STYLEDCOMPONENTS DYNAMISKE:
+--bruger predefinered navne e.g StyledHeading til alle h1,h2,h3,h4 etc.
+--opretter en props, er et objekt man opretter, for at få sendt et objekt med ind i funktionene, der medsender alle de customprops der er defineret på elementet!
+-- i vores eksempel hedder den text, kan kaldes som man vil, altså:<!-- <Heading text="MyMovies> --> her hedder props text, og MyMovies returneres på siden!!
+-- returneres ved at indsættes i constanten: 
+<!-- const Heading = (props) => {
+  return <StyledHeading>{props.text}</StyledHeading>;
+}; -->
+
+DESTRUERES: Kan også destruere objektet
+<!-- const Heading = ({text}) => {
+  return <StyledHeading>{text}</StyledHeading>;
+}; -->
+
+Dette kan også gøres ved e.g. font-size:
+<!-- const Heading = ({text, size}) => {
+    const StyledHeading = styled.h1`
+      font-size: ${size};
+      color: #110e47;
+      justify-self: center;
+    `;
+  return <StyledHeading>{text}</StyledHeading>;
+}; --> OBS her rykkes styled.component ind i constant scopet, da size som parameter ikke kan findes uden for scopet. Og da styled component er en template litteral skal der være dollar-tegn foran for at gøre parameteren dynamisk.
+
+STYLEDCOMPONENT - tilføj egenskaber
+--Når vi arbejder med et element, som har egenskaber vi gerne tilføje er syntaxen styled(type), når vi skal oprette et element er det styled.h1
+
+OPRET OPTIONAL PROP:
