@@ -7,3 +7,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <App />
   </React.StrictMode>
 );
+// her står der at app er det element der rendere hele siden. 

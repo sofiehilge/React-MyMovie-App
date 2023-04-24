@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FaStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa"; //react-icons giver adgang til filen, FaStar er navnet på ikonet¨
 
 const StyledFaStar = styled(FaStar)`
   color: #ffc319;
@@ -14,7 +14,7 @@ const StyledDiv = styled.div`
 
 const MovieRating = () => {
   return (
-    <StyledDiv>
+    <StyledDiv> {/* Her bruger vi en div som container, da vi skal bruge den til styling. */}
       <StyledFaStar />
       <StyledP>9.1/10 IMDb</StyledP>
     </StyledDiv>

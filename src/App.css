@@ -42,6 +42,8 @@ header {
   scrollbar-width: none; /* Firefox */
   /* scroll-behavior: smooth; */
 }
+
+ /* Fordi der på rooten er 2rem, men vi vil ikke have de 2 rem på vores movie-card, derfor -2 */
 .movieCardContainer::-webkit-scrollbar {
   display: none;
 }

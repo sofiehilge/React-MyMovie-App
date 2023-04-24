@@ -5,10 +5,13 @@ import HeadingTwo from "./components/HeadingTwo";
 import SeeMoreButton from "./components/SeeMoreButton";
 
 function App() {
+    // da det er app elementet der renderes, opsættes hele strukturen inde i diven med className="app"
+
   return (
     <div className="App">
       <header className="gridContainer">
         <HeadingOne />
+                {/* Sådan ser et komponent ud når det bruges i React */}
       </header>
       <main>
         <section>
