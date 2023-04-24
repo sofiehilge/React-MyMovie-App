@@ -147,7 +147,8 @@ TIPS:
 
 GØR STYLEDCOMPONENTS DYNAMISKE:
 --bruger predefinered navne e.g StyledHeading til alle h1,h2,h3,h4 etc.
---opretter en props, er et objekt man opretter, for at få sendt et objekt med ind i funktionene, der medsender alle de customprops der er defineret på elementet!
+--PROP er en attribute!!
+--opretter en props, er et objekt man opretter, for at få sendt et objekt med ind i funktionene, der medsender alle de customprops der er defineret på elementet! Elementer er bare funktioner, men med en anden syntax.
 -- i vores eksempel hedder den text, kan kaldes som man vil, altså:<!-- <Heading text="MyMovies> --> her hedder props text, og MyMovies returneres på siden!!
 -- returneres ved at indsættes i constanten: 
 <!-- const Heading = (props) => {
@@ -173,3 +174,24 @@ STYLEDCOMPONENT - tilføj egenskaber
 --Når vi arbejder med et element, som har egenskaber vi gerne tilføje er syntaxen styled(type), når vi skal oprette et element er det styled.h1
 
 OPRET OPTIONAL PROP:
+--VI HAR PROBLEMER MED AT FINDE LØSNINGEN
+
+OPretter et javascript objekt for at lave en midlertidig styling:
+-- dobbelt curlybrackets for det er et objekt.
+
+INSTALLERE SWITCH KNAP:
+
+--https://www.npmjs.com/ Husk at søge på React toggle
+
+-- i dokumentatioen står der: npm i react-switch
+
+--opret ny component fil; 
+
+<!-- 
+import Switch from "react-switch"; -->
+
+STATE-variable:
+-- variable der kan bevare sin værdi henover et rerender. Derfor skal vi fortælle om den er truly eller falsy for at den ved om den er tændt eller slukket.
+--en state er en hook som vi kan bruge som en variable
+LOGICAL KNOT:
+-- vil altid sætte den til den modsatte værdi, eg. toggle mellem ture pg false. 

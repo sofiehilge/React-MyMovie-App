@@ -16,7 +16,7 @@ const MovieCard = () => {
       <figure>
         <Image />
       </figure>
-      <Heading text="Movie name" size="14px" type="h3" />
+      <h3>Title</h3>
       <MovieRating />
     </StyledArticle>
   );
