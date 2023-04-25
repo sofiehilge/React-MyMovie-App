@@ -19,8 +19,6 @@ const MovieCard = () => {
       <Heading
         title="Movie TItle"
         size="14"
-        weight="bold"
-        color="#000"
         as="h3"
       />
       <MovieRating />

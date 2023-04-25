@@ -1,6 +1,7 @@
 import "./App.css";
 import Heading from "./components/heading";
 import MovieCard from "./templates/MovieCard";
+import PopularCard from "./templates/PopularCard";
 import SeeMoreButton from "./components/SeeMoreButton";
 import Switch from "./components/Switch";
 
@@ -10,14 +11,14 @@ function App() {
   return (
     <div className="App">
       <header className="gridContainer">
-        <Heading title="MyMovies" size="16"  weight="bold" color="#110E47" grid="" as="h1"/>
+        <Heading title="MyMovies" size="16" as="h1"/>
         {/* Sådan ser et komponent ud når det bruges i React */}
         <Switch />
       </header>
       <main>
         <section>
           <div className="flexContainer space-between">
-            <Heading title="Now Showing" size="16" weight="regular" color="#110E47" as="h2"/>
+            <Heading title="Now Showing" size="16" as="h2"/>
             <SeeMoreButton />
           </div>
           <div className="flexContainer movieCardContainer">
@@ -26,7 +27,17 @@ function App() {
             <MovieCard />
           </div>
         </section>
-        <section></section>
+        <section>
+          <div className="flexContainer space-between">
+            <Heading title="Popular" size="16" as="h2"/>
+            <SeeMoreButton/>
+          </div>
+          <div>
+            <PopularCard/>
+            <PopularCard/>
+            <PopularCard/>
+          </div>
+        </section>
       </main>
       <footer>
         <nav></nav>
