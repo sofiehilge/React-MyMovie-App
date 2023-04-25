@@ -11,6 +11,7 @@ const Switch = () => {
   const handleChange = () => {
     /* Som en eventlistener, der her skal ske på onChange */
     setChecked(!checked);
+    /* hernede skriver vi logikken så den kan skifte temaet */
   };
   return (
     <StyledSwitch /* Denne styling kan findes inde i documentationen på npmjs, noget af stylingen står i curley brackets fordi de skrives som JS Object. */

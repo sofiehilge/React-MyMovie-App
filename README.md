@@ -160,7 +160,7 @@ DESTRUERES: Kan også destruere objektet
   return <StyledHeading>{text}</StyledHeading>;
 }; -->
 
-Dette kan også gøres ved e.g. font-size:
+Dette kan også gøres ved e.g. font-size: DET HER VIRKER IKKE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 <!-- const Heading = ({text, size}) => {
     const StyledHeading = styled.h1`
       font-size: ${size};
@@ -169,15 +169,59 @@ Dette kan også gøres ved e.g. font-size:
     `;
   return <StyledHeading>{text}</StyledHeading>;
 }; --> OBS her rykkes styled.component ind i constant scopet, da size som parameter ikke kan findes uden for scopet. Og da styled component er en template litteral skal der være dollar-tegn foran for at gøre parameteren dynamisk.
+Udfordringen er at vi har brug for en prop i componentet som bliver defineret i en konstant uden for det funktionelle komponent.
+
+DYNAMISK PROPS:
+-- Vi kalder props i komponentet og fortæller i styled.komponenet hvilken styling den skal hente ved at definere det som en template litteral i styled compoenent:
+<!-- 
+import styled from "styled-components";/* muliggøre stykkubg */
+
+const StyledHeading = styled.h1`
+    font-size: ${props => props.size}px;
+
+`
+/* Når vi definere px inde i styled component sørger vi for at den der bruger komponenet ikke selv kan breake komponentet. */
+
+const Heading = (props) => {
+    return ( 
+        <StyledHeading size={props.size}>{props.title}</StyledHeading>
+     );
+} -->
 
 STYLEDCOMPONENT - tilføj egenskaber
 --Når vi arbejder med et element, som har egenskaber vi gerne tilføje er syntaxen styled(type), når vi skal oprette et element er det styled.h1
 
-OPRET OPTIONAL PROP:
---VI HAR PROBLEMER MED AT FINDE LØSNINGEN
+POLYMOPHIC PROPS:
+-- giver mulighed for at definere forskellige HTML tags for custome components. KALDET as
+eksempel:
+<!-- const StyledHeading = styled(props => props.as)`
+    font-size: ${(props) => props.size}px;
+
+`
+/* Når vi definere px inde i styled component sørger vi for at den der bruger komponenet ikke selv kan breake komponentet. */
+
+const Heading = (props) => {
+    return ( 
+        <StyledHeading size={props.size} as={props.as}>{props.title}</StyledHeading>
+     );
+} --> Kaldes i komponentet i app.jsx som sædvanligt. eg <!-- <Heading title="MyMovies" size="16"  weight="bold" as="h1"/> -->
+
+SPREADOPERATOR:
+-- gør at man spreder alle de props ud over det element man vil have dem på. gøres med ...
+-- DEN TAGER ALLE PROPERTIES DER LIGGER I ET OBJEKT OG SPREDER DET I VORES TILFÆLDE UD OVER ELEMENTET SOM PROPS.
+EKSEMPEL:
+<!-- const Heading = (props) => {
+    return ( 
+        //<StyledHeading size={props.size} weight={props.weight} as={props.as}>{props.title}</StyledHeading>
+        <StyledHeading {...props}>{props.title}</StyledHeading>
+     );
+} -->
 
 OPretter et javascript objekt for at lave en midlertidig styling:
 -- dobbelt curlybrackets for det er et objekt.
+
+CURLYBRACKETS:
+-- Når man vil skrive noget dynamisk så skal man skrive det i curleybrackets
 
 INSTALLERE SWITCH KNAP:
 
