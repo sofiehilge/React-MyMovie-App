@@ -4,6 +4,7 @@ import MovieCard from "./templates/MovieCard";
 import PopularCard from "./templates/PopularCard";
 import SeeMoreButton from "./components/SeeMoreButton";
 import Switch from "./components/Switch";
+import Footer from "./templates/footer";
 
 function App() {
   // da det er app elementet der renderes, opsættes hele strukturen inde i diven med className="app"
@@ -11,14 +12,14 @@ function App() {
   return (
     <div className="App">
       <header className="gridContainer">
-        <Heading title="MyMovies" size="16" as="h1"/>
+        <Heading title="MyMovies" size="16" as="h1" />
         {/* Sådan ser et komponent ud når det bruges i React */}
         <Switch />
       </header>
       <main>
         <section>
           <div className="flexContainer space-between">
-            <Heading title="Now Showing" size="16" as="h2"/>
+            <Heading title="Now Showing" size="16" as="h2" />
             <SeeMoreButton />
           </div>
           <div className="flexContainer movieCardContainer">
@@ -29,18 +30,18 @@ function App() {
         </section>
         <section>
           <div className="flexContainer space-between">
-            <Heading title="Popular" size="16" as="h2"/>
-            <SeeMoreButton/>
+            <Heading title="Popular" size="16" as="h2" />
+            <SeeMoreButton />
           </div>
           <div>
-            <PopularCard/>
-            <PopularCard/>
-            <PopularCard/>
+            <PopularCard />
+            <PopularCard />
+            <PopularCard />
           </div>
         </section>
       </main>
       <footer>
-        <nav></nav>
+        <Footer/>
       </footer>
     </div>
   );

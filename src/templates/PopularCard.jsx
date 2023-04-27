@@ -31,7 +31,7 @@ const PopularCard = () => {
         <Image />
       </figure>
       <StyledDiv>
-        <Heading title="Movie Title" size="14" as="h3" />
+        <Heading title="Movie Title" size="14" as="h3"/>
         <MovieRating />
         <StyledFlexContainer className="flexContainer">
           <ThemeItem title="Horror" />

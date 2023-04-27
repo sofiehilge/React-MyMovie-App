@@ -13,8 +13,7 @@ const StyledP = styled.p`
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  height: 15px;
-  width: 56.7px;
+  padding: 15px;
   gap: 5px;
   margin: 5px;
   text-align: center;
