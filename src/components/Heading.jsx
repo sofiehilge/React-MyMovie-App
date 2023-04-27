@@ -1,21 +1,20 @@
 /* Fordi heading er så ens altså både h1, h2, h3 osv, ligner hinanden så meget så det kan betale sig at lave en komponenet for dem. Men vi ville ikke gøre det med billeder etc.  */
 
-import styled from "styled-components";/* muliggøre stykkubg */
+import styled from "styled-components"; /* muliggøre stykkubg */
 
-const StyledHeading = styled(props => props.as)`
-    font-size: ${(props) => props.size}px;
-grid-column-start: 2;/* De her vil ikke influere på de andre headings, da de ligger i flexbox og ikke i en grid container. */
-justify-self: center;/* Du kan altså også både style med props og fra hardcoding styling */
+const StyledHeading = styled((props) => props.as)`
+  font-size: ${(props) => props.size}px;
+  grid-column-start: 2; /* De her vil ikke influere på de andre headings, da de ligger i flexbox og ikke i en grid container. */
+  justify-self: center; /* Du kan altså også både style med props og fra hardcoding styling */
 `;
 /* Når vi definere px inde i styled component sørger vi for at den der bruger komponenet ikke selv kan breake komponentet. */
 
 const Heading = (props) => {
-    return ( 
-        //<StyledHeading size={props.size} weight={props.weight} as={props.as}>{props.title}</StyledHeading>
-        <StyledHeading {...props}>{props.title}</StyledHeading>
-     );
-}
- 
+  return (
+    //<StyledHeading size={props.size} weight={props.weight} as={props.as}>{props.title}</StyledHeading>
+    <StyledHeading {...props}>{props.title}</StyledHeading>
+  );
+};
 
 /* const Heading = (props) => {
   return <StyledHeading>{props.text}</StyledHeading>;
@@ -25,4 +24,3 @@ const Heading = (props) => {
 /* Denne konstant er en fnktion der returnere et element. */
 
 export default Heading; //skal importeres hvor den skal bruges, i vores app.jsx som indeholder vores struktur.
-

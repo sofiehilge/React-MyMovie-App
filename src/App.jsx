@@ -40,9 +40,7 @@ function App() {
           </div>
         </section>
       </main>
-      <footer>
         <Footer/>
-      </footer>
     </div>
   );
 }
