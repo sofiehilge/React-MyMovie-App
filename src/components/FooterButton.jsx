@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { BsBookmark } from "react-icons/bs";
+import { BsBookmark, BsTicket } from "react-icons/bs";
+import { FcFilmReel  } from "react-icons/fc";
 
 const StyledButton = styled.button`
 color: #110e47;
@@ -11,14 +12,17 @@ font-size: 2 rem;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+	gap: 30px;
 `;
 
-const BookmarkButton = () => {
+const FooterButton = () => {
     return ( 
       <StyledButton>
+		<FcFilmReel/>
+		<BsTicket/>
         <BsBookmark/>
       </StyledButton>
      );
 }
  
-export default BookmarkButton;
+export default FooterButton;

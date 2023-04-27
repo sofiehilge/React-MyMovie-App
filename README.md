@@ -239,3 +239,6 @@ STATE-variable:
 --en state er en hook som vi kan bruge som en variable
 LOGICAL KNOT:
 -- vil altid sætte den til den modsatte værdi, eg. toggle mellem ture pg false. 
+
+### Flere sidder i React:
+-- vi arbejder med en single page-app, hvor siden ikke genindlæses, men hvor man faktisk bare skifter indholdet ud.

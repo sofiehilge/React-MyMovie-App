@@ -28,7 +28,7 @@ const PopularCard = () => {
   return (
     <StyledArticle>
       <figure>
-        <Image />
+        <Image/>
       </figure>
       <StyledDiv>
         <Heading title="Movie Title" size="14" as="h3"/>

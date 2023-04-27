@@ -14,7 +14,7 @@ const MovieCard = () => {
   return (
     <StyledArticle>
       <figure>
-        <Image />
+        <Image shadow={true}/>{/* Fordi vi sender en boolean med, sættes den med curleybrackets */}
       </figure>
       <Heading
         title="Movie TItle"

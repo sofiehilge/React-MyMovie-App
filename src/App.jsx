@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <header className="gridContainer">
-        <Heading title="MyMovies" size="16" as="h1" />
+        <Heading title="MyMovies" size="16" as="h1"  />
         {/* Sådan ser et komponent ud når det bruges i React */}
         <Switch />
       </header>
