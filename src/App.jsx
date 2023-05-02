@@ -5,6 +5,7 @@ import PopularCard from "./templates/PopularCard";
 import SeeMoreButton from "./components/SeeMoreButton"; */
 import HeadingDetails from "./templates/HeadingDetails";
 import MovieDetails from "./templates/MovieDetails";
+import MovieDescription from "./templates/MovieDescription";
 /* import Footer from "./templates/Footer"; */
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
    <div className="App">
       <HeadingDetails/>
       <MovieDetails/>
+      <MovieDescription/>
     </div>
   );
 }

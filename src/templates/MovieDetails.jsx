@@ -2,11 +2,11 @@ import styled from "styled-components";
 import Heading from "../components/Heading";
 import MovieRating from "../components/MovieRating";
 import ThemeItem from "../components/ThemeItem";
+import Paragraf from "../components/Paragraf";
 import { BsBookmark } from "react-icons/bs";
 
 const StyledMovieDetails = styled.main`
   background-color: white;
-  height: 500px;
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
   margin-top: -2rem;
@@ -40,10 +40,18 @@ const StyledThemeContainer = styled.div`
 
 const StyledLengthDetails = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  text-align: left;
+  margin-left: -2rem;
   line-height: 0;
+  /*  
   margin-bottom: -1rem;
-  text-align: center;
+  text-align: center; */
+`;
+
+const StyledColumn = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const MovieDetails = () => {
@@ -60,18 +68,18 @@ const MovieDetails = () => {
         <ThemeItem title="Fantasy" />
       </StyledThemeContainer>
       <StyledLengthDetails>
-        <div>
-             <Heading title="Length" size="12" as="h4" />
-            <Heading title="2h 28min" size="12" as="h5" />
-        </div>
-       <div>
-         <Heading title="Language" size="12" as="h4" />
-          <Heading title="English" size="12" as="h5" />
-       </div>
-       <div>
-        <Heading title="Rating" size="12" as="h4" />
-        <Heading title="PG-13" size="12" as="h5" />
-       </div>
+        <StyledColumn>
+          <Heading title="Length" size="12" as="h4" />
+          <Paragraf title="2h 28min" size="12" weight="bold" as="p" />
+        </StyledColumn>
+        <StyledColumn>
+          <Heading title="Language" size="12" as="h4" />
+          <Paragraf title="English" size="12" weight="bold" as="p" />
+        </StyledColumn>
+        <StyledColumn>
+          <Heading title="Rating" size="12" as="h4" />
+          <Paragraf title="PG-13" size="12" weight="bold" as="p" />
+        </StyledColumn>
       </StyledLengthDetails>
     </StyledMovieDetails>
   );
