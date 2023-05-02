@@ -2,7 +2,7 @@
 @import "normalize.css";
 #root {
   max-width: 768px;
-/*   padding: 2rem; */
+  /*   padding: 2rem; */
   font-family: "Mulish", sans-serif;
 }
 body,
@@ -17,13 +17,20 @@ h3 {
 h1,
 h2 {
   font-family: "Merriweather", serif;
-  color: #110E47;
+  color: #110e47;
   /* regular er default font-weight, derfor er den ikke defineret */
 }
 
-h3{
+h3 {
   font-weight: 700;
   /* sort er default, derfor behøver vi ikke definere den */
+}
+
+h4 {
+  color: #9c9c9c;
+}
+h5 {
+  color: black;
 }
 .flexContainer {
   display: flex;
@@ -36,13 +43,13 @@ h3{
   align-items: center;
 }
 
-.fixed{
+.fixed {
   position: fixed;
 }
 
-header{
+header {
   height: 60px;
-  grid-template-columns: 1fr 1fr 1fr;/* definere et template for hvordan colonerne skal være */
+  grid-template-columns: 1fr 1fr 1fr; /* definere et template for hvordan colonerne skal være */
 }
 
 header {
@@ -60,7 +67,7 @@ header {
   /* scroll-behavior: smooth; */
 }
 
- /* Fordi der på rooten er 2rem, men vi vil ikke have de 2 rem på vores movie-card, derfor -2 */
+/* Fordi der på rooten er 2rem, men vi vil ikke have de 2 rem på vores movie-card, derfor -2 */
 .movieCardContainer::-webkit-scrollbar {
   display: none;
 }
