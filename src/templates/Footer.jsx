@@ -2,9 +2,7 @@ import styled from "styled-components";
 import FooterButton from "../components/FooterButton";
 
 const StyledFooter = styled.nav`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+
   margin: 0 auto;
   bottom: 0;
   position: fixed;

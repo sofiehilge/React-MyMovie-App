@@ -4,7 +4,7 @@ import MovieCard from "./templates/MovieCard";
 import PopularCard from "./templates/PopularCard";
 import SeeMoreButton from "./components/SeeMoreButton";
 import Switch from "./components/Switch";
-import Footer from "./templates/Footer";
+import Footer from "./templates/footer";
 
 function App() {
   // da det er app elementet der renderes, opsættes hele strukturen inde i diven med className="app"
