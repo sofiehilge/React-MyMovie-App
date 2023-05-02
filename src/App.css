@@ -2,7 +2,7 @@
 @import "normalize.css";
 #root {
   max-width: 768px;
-  padding: 2rem;
+/*   padding: 2rem; */
   font-family: "Mulish", sans-serif;
 }
 body,
