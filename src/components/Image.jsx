@@ -8,7 +8,7 @@ const StyledImg = styled.img`
 `;
 
 const Image = (props) => {
-  return <StyledImg {...props} src={coverimage} alt="blablabla"/>;
+  return <StyledImg {...props} src={coverimage} alt="moviecover"/>;
 };
 //alt hvad der står i constanten er javascript.
 

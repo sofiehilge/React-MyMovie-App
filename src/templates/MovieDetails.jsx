@@ -70,15 +70,15 @@ const MovieDetails = () => {
       <StyledLengthDetails>
         <StyledColumn>
           <Heading title="Length" size="12" as="h4" />
-          <Paragraf title="2h 28min" size="12" weight="bold" as="p" />
+          <Paragraf tekst="2h 28min" size="12" weight="bold" />
         </StyledColumn>
         <StyledColumn>
           <Heading title="Language" size="12" as="h4" />
-          <Paragraf title="English" size="12" weight="bold" as="p" />
+          <Paragraf tekst="English" size="12" weight="bold" />
         </StyledColumn>
         <StyledColumn>
           <Heading title="Rating" size="12" as="h4" />
-          <Paragraf title="PG-13" size="12" weight="bold" as="p" />
+          <Paragraf tekst="PG-13" size="12" weight="bold" />
         </StyledColumn>
       </StyledLengthDetails>
     </StyledMovieDetails>

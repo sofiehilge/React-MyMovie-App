@@ -71,3 +71,13 @@ header {
 .movieCardContainer::-webkit-scrollbar {
   display: none;
 }
+
+.padding {
+  padding: 2rem;
+}
+
+.column {
+  flex-direction: column;
+}
+
+
