@@ -1,5 +1,5 @@
 import "./App.css";
-import Heading from "./components/heading";
+import Heading from "./components/Heading;
 import MovieCard from "./templates/MovieCard";
 import PopularCard from "./templates/PopularCard";
 import SeeMoreButton from "./components/SeeMoreButton";
@@ -10,9 +10,9 @@ function App() {
   // da det er app elementet der renderes, opsættes hele strukturen inde i diven med className="app"
 
   return (
-    <div className="App">
+    <div className="App padding">
       <header className="gridContainer">
-        <Heading title="MyMovies" size="16" as="h1"  />
+        <Heading title="MyMovies" size="16" as="h1" />
         {/* Sådan ser et komponent ud når det bruges i React */}
         <Switch />
       </header>
@@ -40,7 +40,7 @@ function App() {
           </div>
         </section>
       </main>
-        <Footer/>
+      <Footer />
     </div>
   );
 }
