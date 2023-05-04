@@ -4,6 +4,7 @@ import styled from "styled-components"; /* muliggøre stykkubg */
 
 const StyledHeading = styled((props) => props.as)`
   font-size: ${(props) => props.size}px;
+  ${(props) => props.center && 'text-align:center'}
   grid-column-start: 2; /* De her vil ikke influere på de andre headings, da de ligger i flexbox og ikke i en grid container. */
   justify-self: center; /* Du kan altså også både style med props og fra hardcoding styling */
 `;

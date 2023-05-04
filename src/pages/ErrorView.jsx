@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import dinoAnimation from "../assets/lottiefiles/error.json";
+import dinoAnimation from "../assets/lottiefiles/gySN7JLsNO.json";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Heading from "../components/Heading";
@@ -19,9 +19,14 @@ const StyledLink = styled(Link)`
 const ErrorView = () => {
   return (
     <StyledLink>
-      <Heading title="Sorry something went wrong" size="24" as="h2" />
+      <Heading
+        title="Sorry, we can't show that page!"
+        size="16"
+        center={true}
+        as="h2"
+      />
       <StyledLottie animationData={dinoAnimation} />;
-      <Heading title="Click here to return to frontpage" size="18" as="h2" />
+      <Heading title="Return to frontpage" size="18" center={true} as="h2" />
     </StyledLink>
   );
 };
