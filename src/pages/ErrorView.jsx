@@ -4,12 +4,14 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Heading from "../components/Heading";
 
+import ThemeItem from "../components/ThemeItem";
+
 const StyledLottie = styled(Lottie)`
   width: 100vw;
   height: 100vw;
 `;
 
-const StyledLink = styled(Link)`
+const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,16 +20,18 @@ const StyledLink = styled(Link)`
 
 const ErrorView = () => {
   return (
-    <StyledLink>
+    <StyledDiv>
       <Heading
         title="Sorry, we can't show that page!"
         size="16"
         center={true}
         as="h2"
       />
-      <StyledLottie animationData={dinoAnimation} />;
-      <Heading title="Return to frontpage" size="18" center={true} as="h2" />
-    </StyledLink>
+      <StyledLottie animationData={dinoAnimation} />
+      <Link to="/">
+        <ThemeItem title="Back to front page" />
+      </Link>
+    </StyledDiv>
   );
 };
 

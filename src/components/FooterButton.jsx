@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { BsBookmark, BsTicket } from "react-icons/bs";
 import { FcFilmReel } from "react-icons/fc";
 
-const StyledBookmark = styled(BsBookmark)`
+/* const StyledBookmark = styled(BsBookmark)`
   background: none;
   color: inherit;
   border: none;
@@ -35,7 +35,7 @@ const StyledFilmreel = styled(FcFilmReel)`
   cursor: pointer;
   outline: inherit;
   gap: 30px;
-`;
+`; */
 
 const StyledFooter = styled.div`
   display: flex;
@@ -44,14 +44,22 @@ const StyledFooter = styled.div`
   font-size: 1.5rem;
   color: #bcbccd;
   padding-top: 10px;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  gap: 30px;
+  padding: 2rem;
 `;
 
 const FooterButton = () => {
   return (
     <StyledFooter>
-      <StyledFilmreel />
-      <StyledTicket />
-      <StyledBookmark />
+      <FcFilmReel />
+      <BsTicket />
+      <BsBookmark />
     </StyledFooter>
   );
 };
