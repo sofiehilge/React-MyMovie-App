@@ -277,3 +277,7 @@ LOGICAL KNOT:
 -- vi sætter link rundt om moviecard, og to="" property kaldes ved at matche padti vi skriver i main, i vores tilfælde details:id 
 
 --- /:id viser det er et dynamisk id, og beskriver et segment.
+
+### ELEMENT: er bare en template, component eller page.
+
+NU skal vi style error page.

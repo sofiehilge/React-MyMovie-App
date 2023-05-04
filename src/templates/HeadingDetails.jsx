@@ -3,6 +3,7 @@ import backgroundImage from "../assets/backgroundimage.png";
 import Switch from "../components/Switch";
 import Play from "../components/Playbutton";
 import Arrow from "../components/Arrow";
+import { Link } from "react-router-dom";
 
 const StyledHeading = styled.header`
   background-image: url(${backgroundImage});
@@ -34,7 +35,10 @@ const HeadingDetails = () => {
   return (
     <StyledHeading>
       <StyledNav>
-        <Arrow />
+        <Link to="/">
+          <Arrow />
+        </Link>
+
         <Switch />
       </StyledNav>
       <StyledPlay>

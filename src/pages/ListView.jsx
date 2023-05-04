@@ -10,12 +10,12 @@ import { Link } from "react-router-dom";
 const ListView = () => {
   return (
     <>
-      <header className="gridContainer">
+      <header className="gridContainer padding">
         <Heading title="MyMovies" size="16" as="h1" />
         {/* Sådan ser et komponent ud når det bruges i React */}
         <Switch />
       </header>
-      <main>
+      <main className="padding">
         <section>
           <div className="flexContainer space-between">
             <Heading title="Now Showing" size="16" as="h2" />

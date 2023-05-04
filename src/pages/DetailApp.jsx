@@ -1,4 +1,3 @@
-
 /* import Heading from "./components/heading";
 import MovieCard from "./templates/MovieCard";
 import PopularCard from "./templates/PopularCard";
@@ -25,29 +24,19 @@ const DetailApp = () => {
       <div className="flexContainer space-between padding">
         <div className="flexContainer column">
           <CastImage />
-          <Paragraf tekst="Tom Holland" size="12" color="110E47" width={true} />
+          <Paragraf tekst="Tom Holland" size="12" color="110E47" />
         </div>
         <div className="flexContainer column">
           <CastImage />
-          <Paragraf tekst="Zendaya" size="12" color="110E47" width={true} />
+          <Paragraf tekst="Zendaya" size="12" color="110E47" />
         </div>
         <div className="flexContainer column">
           <CastImage />
-          <Paragraf
-            tekst="Benedict Cumberbatch"
-            size="12"
-            color="110E47"
-            width={true}
-          />
+          <Paragraf tekst="Benedict Cumberbatch" size="12" color="110E47" />
         </div>
         <div className="flexContainer column">
           <CastImage />
-          <Paragraf
-            tekst="Jacon Batalon"
-            size="12"
-            color="110E47"
-            width={true}
-          />
+          <Paragraf tekst="Jacon Batalon" size="12" color="110E47" />
         </div>
       </div>
     </>
