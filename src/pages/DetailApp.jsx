@@ -1,4 +1,4 @@
-import "./App.css";
+
 /* import Heading from "./components/heading";
 import MovieCard from "./templates/MovieCard";
 import PopularCard from "./templates/PopularCard";
@@ -12,11 +12,9 @@ import CastImage from "../components/CastImage";
 import Paragraf from "../components/Paragraf";
 /* import Footer from "./templates/Footer"; */
 
-function App() {
-  // da det er app elementet der renderes, opsættes hele strukturen inde i diven med className="app"
-
+const DetailApp = () => {
   return (
-    <div className="App">
+    <>
       <HeadingDetails />
       <MovieDetails />
       <MovieDescription />
@@ -52,8 +50,9 @@ function App() {
           />
         </div>
       </div>
-    </div>
+    </>
   );
-}
+};
 
-export default App;
+export default DetailApp;
+// da det er app elementet der renderes, opsættes hele strukturen inde i diven med className="app"

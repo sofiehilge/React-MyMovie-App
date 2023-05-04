@@ -242,3 +242,38 @@ LOGICAL KNOT:
 
 ### Flere sidder i React:
 -- vi arbejder med en single page-app, hvor siden ikke genindlæses, men hvor man faktisk bare skifter indholdet ud.
+
+### Routing i React til at kunne skifte mellem sider
+--- vi skal etablere en link funktion som vi kan sende op i vores URL. 
+--- Vi har kun en HTML side - derfor gør vi det at vi holder øje med adressen og siger, hvis det er denne her komponent der står oppe i url'en skal du rendere denne her komponent. 
+
+### React Router stiller mange funktionaliteter til rådighed, men vi skal i første omgang gøre vores links click parate således at vi får et andet view.
+
+### React view har desuden lavet en funktion hvor man henter indhold på forhånd. 
+
+## omorganisere siderne 
+--- opretter ListView.jsx  det er et komponent.
+--- kopier alle komponenet fra app.jsx over i listView.
+-- fordi under i App.jsx vil vi skifte mellem listevisningen.
+
+### importer react router i main.jsx
+--- skriv i terminalen: npm i react-router-dom
+--- obs findes flere forskellige routere, vi bruger create router Browser, da denne muliggøre loader, actions og fetches. Loaders vil hjælpe med at hente data. 
+--- istedet for at hente routeren som et objekt, henter vi den som et element, da det er nemmere at overskue og at forstå. Men man kan selv vælge. https://reactrouter.com/en/main/utils/create-routes-from-elements
+--- importer router i main.jsx: import {createBrowserRouter, createRoutesFromElements, RouterProvider, Rout}
+
+--- dokumentationen fortæller os at rout hjælper os med at skabe en path som matcher urlen og definere hvad der skal vises.
+
+--- App er containeren for hele vores projekt. Derfor får vi Route til at indlæse app elementet.
+
+---Vi vil gerne definere hvad der skal vises når der står noget i urlen i vores App.jsx. Det der vises defineres i vores browserrouter i main.jsx
+
+-- Outlet er et komponenet som fortæller hvor vi vil rendere elementerne.
+
+-- vi bruger ikke anker-tag da det laver et hardrefresh, vi vil bare rerendere det der bliver vist. ikke genindlæse siden. Det er det der er hele pointen med at lave en singlepage app.
+
+-- Først og fremmest importeres det der skal bruges, derfor import link.
+
+-- vi sætter link rundt om moviecard, og to="" property kaldes ved at matche padti vi skriver i main, i vores tilfælde details:id 
+
+--- /:id viser det er et dynamisk id, og beskriver et segment.
