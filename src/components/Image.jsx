@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import coverimage from "../assets/moviecover.png";
 //billedet skal importeres øverst i React, stien lægges da ned i coverimage variablen, sådan at man kan kalde den. Når man skal lave attributer i react, laves det med curlybrackets.
 
 const StyledImg = styled.img`
@@ -8,7 +7,7 @@ const StyledImg = styled.img`
 `;
 
 const Image = (props) => {
-  return <StyledImg {...props} src={coverimage} alt="moviecover"/>;
+  return <StyledImg {...props} alt="moviecover"/>;
 };
 //alt hvad der står i constanten er javascript.
 

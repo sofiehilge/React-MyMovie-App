@@ -281,3 +281,48 @@ LOGICAL KNOT:
 ### ELEMENT: er bare en template, component eller page.
 
 NU skal vi style error page.
+
+### loaderprops:
+
+--- export async function loader() hjælper os med at hente data fra vores API, men vi kan ikke bruge vores funktion inde i komponentet, da komponenetet først vil blive loadet og dernæst loader dataen. Derfor sørger vi for at preloade, med en loaderprops
+
+-- i react router har man mulighed for at sende en prop med der hedder loader, det er den loader der viser dataen.
+
+--- gøres ved i main.jsx at skrive import { loader (gives et alias, da vi har brug for flere loader funktioner) as MovieCardDataLoader} from "./nowShowing"
+
+--- importeres på vores main.js, fordi loader kan bruges på route element, og rout elementer ligger altid i main. Route er som et predefineret komponenet, som vi kan bruge. 
+
+--- med stylecomponent sender loader med som en prop med loader=MovieCardDataLoader i vores router element.
+
+--- fordi vi bruger et route komponent, som er prædefineret, kan vi ikke se at det er en prop, men det er derfor det ikke er nødvendigt at definere den som props.
+
+--HOOK bruges når vi bruger useLoaderData() - da dette gør at vi kan kan hente dataen ind på hele siden. 
+
+--- vi kan hente api daten nu til f.eks hente heading i title={MovieCardData.results[0].title} --- nu er den hardcodet
+
+--- <> fragment bruges til at omkranse flere elementer som skal sendes med.
+---{} vi bruger curleybrackets til at at definere vores map. {MovieCardData.results.map((data) => ())} VI BRUGER PARANTESER, ISTEDET FOR CURLEYBRAKCETS,  selvom det er en call back function, men dette gør det muligt at vise at det er element der skal sendes med.  I parentesen 
+medsendes element.
+
+--- Warning, each vchils ina  list should have a key prop: Hvert kort inde i MovieCardData skal have en unik værdi. skriv i Link key={data.id}, da hver objekt i API'et har hver deres individuelle ID.
+
+--- så kan man i Heading title= skrive data.title, da den dynamiske data  ligger i data
+
+--- så bliver det grimt, fordi titlerne har forskellig længde!! split() er en funktion, som gør at titlen bliver forkortet ned til x-antal ord.den tager parameter som start og end skrives title.split("").slice(0, 3).join(" "), da vi vil have tre punktummer efterfulgt af titlen i tilfælde af at de har skåret lidt af titlen. bliver vi nødt til at bruge en short handed turnary operator, som kan sige hvis længere end 25 tegn, tag titlen og udfør substing, og lim da .... på, else-
+
+---først se på længden, betingelse større end 25, title={data.title.length > 25 ? data.title.split(" ").slice(0,3).join("") + "..." : data.title}
+SPLIT: tag denne her streng og split den for hvergang der er mellemrum, slice den efter tre ord og kommaseparere den, join med space istedet for join
+
+---- DET er fordi vi er indenfor et return element, derfor skal vi bruge en anden syntax end ude i funktionerne, som logical knot, logical and etc.
+
+### rating dynamisk rating
+
+inde på komponentet skal du gøre rating klar til at tage imod en prop.
+
+voteAvarage={data.vote_average}
+
+under komponenetet {props.voteAverage}
+### Indsæt dynamisk image 
+
+--- find et baseURL til at sætte foran poster_path
+--- ændre image src{`baseurl indsættes hardcodet/${data.poster_path}} i base url'en kunne man sætte w ned til 200 som det mindste. Efterfølgende styling af width laves med props
