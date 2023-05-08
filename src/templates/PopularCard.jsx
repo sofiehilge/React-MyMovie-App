@@ -4,6 +4,7 @@ import Heading from "../components/Heading";
 import MovieRating from "../components/MovieRating";
 import ThemeItem from "../components/ThemeItem";
 import Time from "../components/Time";
+import { Link, useLoaderData } from "react-router-dom";
 
 const StyledArticle = styled.article`
   height: 283px;
@@ -21,26 +22,46 @@ const StyledDiv = styled.div`
 `;
 
 const StyledFlexContainer = styled.div`
-gap: 15px;
-`
+  gap: 15px;
+`;
 
 const PopularCard = () => {
+  const MovieCardData = useLoaderData();
+
   return (
-    <StyledArticle>
-      <figure>
-        <Image/>
-      </figure>
-      <StyledDiv>
-        <Heading title="Movie Title" size="14" as="h3"/>
-        <MovieRating />
-        <StyledFlexContainer className="flexContainer">
-          <ThemeItem title="Horror" />
-          <ThemeItem title="Mystery" />
-          <ThemeItem title="Thriller" />
-        </StyledFlexContainer>
-        <Time />
-      </StyledDiv>
-    </StyledArticle>
+    <>
+      {MovieCardData.results.map((data) => (
+        <Link to={`details/${data.id}`} key={data.id}>
+          <StyledArticle>
+            <figure>
+              <Image
+                width="85"
+                src={`https://image.tmdb.org/t/p/w200/${data.poster_path}`}
+                alt="cover Image"
+              />
+            </figure>
+            <StyledDiv>
+              <Heading
+                title={
+                  data.title.length > 25
+                    ? data.title.split(" ").slice(0, 3).join(" ") + "..."
+                    : data.title
+                }
+                size="14"
+                as="h3"
+              />
+              <MovieRating />
+              <StyledFlexContainer className="flexContainer">
+                <ThemeItem title="Horror" />
+                <ThemeItem title="Mystery" />
+                <ThemeItem title="Thriller" />
+              </StyledFlexContainer>
+              <Time />
+            </StyledDiv>
+          </StyledArticle>
+        </Link>
+      ))}
+    </>
   );
 };
 

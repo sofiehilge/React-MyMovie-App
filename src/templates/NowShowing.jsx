@@ -47,7 +47,7 @@ const NowShowing = () => {
 
 export async function loader() {
   const res = await fetch(
-    "https://api.themoviedb.org/3/movie/now_playing/?api_key=46c585d48459a26f69c1d564844e723c"
+    "https://api.themoviedb.org/3/movie/now_playing/?api_key="
   );
   const data = await res.json();
   return data;

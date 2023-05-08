@@ -21,7 +21,7 @@ const ListView = () => {
             <SeeMoreButton />
           </div>
           <div className="flexContainer movieCardContainer">
-            <NowShowing/>
+            <NowShowing />
           </div>
         </section>
         <section>
