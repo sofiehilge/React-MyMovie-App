@@ -12,11 +12,11 @@ const StyledArticle = styled.article`
 `;
 
 const NowShowing = () => {
-  const MovieCardData = useLoaderData();
+  const MovieCardData = useLoaderData(); /* Denne bruger man som hook til at få dataen ud af requesten. */
 
   return (
     <>
-      {MovieCardData.nowShowing.map((data) => (
+      {MovieCardData.nowShowing.map((data) => (/* OBS! Vi bruger map da det er en listevisning:) */
         <Link to={`details/${data.id}`} key={data.id}>
           <StyledArticle>
             <figure>

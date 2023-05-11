@@ -4,7 +4,7 @@ import Heading from "../components/Heading";
 import MovieRating from "../components/MovieRating";
 import ThemeItem from "../components/ThemeItem";
 import Time from "../components/Time";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData} from "react-router-dom";
 
 const StyledArticle = styled.article`
   display: flex;

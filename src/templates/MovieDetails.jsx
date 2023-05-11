@@ -4,6 +4,7 @@ import MovieRating from "../components/MovieRating";
 import ThemeItem from "../components/ThemeItem";
 import Paragraf from "../components/Paragraf";
 import { BsBookmark } from "react-icons/bs";
+import { useLoaderData } from "react-router-dom";
 
 const StyledMovieDetails = styled.main`
   background-color: white;
@@ -55,10 +56,12 @@ const StyledColumn = styled.div`
 `;
 
 const MovieDetails = () => {
+  /* Skal du have rating skal du skrive det her op. */
+  const DetailData = useLoaderData();
   return (
     <StyledMovieDetails>
       <StyledFlexbox>
-        <Heading title="Spiderman: No Way Home" size="40" as="h3" />
+        <Heading title={DetailData.title} size="40" as="h3" />
         <StyledBookmark />
       </StyledFlexbox>
       <MovieRating />

@@ -5,11 +5,11 @@ import Switch from "../components/Switch";
 import Footer from "../templates/footer";
 import NowShowing from "../templates/NowShowing";
 /* to punktummer for nu er vi i pages mappen og skal hoppe ud af pages mappen og ind i componenet mappen. */
-import { useLoaderData } from "react-router-dom";
+/* import { useLoaderData } from "react-router-dom"; */
 import axios from "axios";
 
 const ListView = () => {
-  const ListViewData = useLoaderData();
+ /*  const ListViewData = useLoaderData(); */
 
   return (
     <>

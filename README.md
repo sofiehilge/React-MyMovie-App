@@ -336,10 +336,25 @@ bruges til at hooke et id til urlen
 --- når de hedder noget med USE er det fordi de er preprogrammerede med nogle funktioner, disse kan kun bruges inden for scopet af et komponenet.
 --- scopet er vores komponenet, og ikke i vores asynkrone funktion hvor dataen bliver hentet fra APIet
 
---- derfor kan man ikke bruge useParams hook, da loader er en asynkron funktion. Derfor har de oprettet en params, som man kan bruge. 
+--- derfor kan man ikke bruge useParams hook, da loader er en asynkron funktion. Derfor har de oprettet en params, som man kan bruge. Men man kan sagtens bruge den i andre tilfælde hvor man vil sender data med i Urlen, for at arbejde med det et andet sted. 
+
+-- hvordan man bruger useParams til at hive Id'et ned fra Url'en og kunne bruge den med hooken useParams.
+
+- først importere vi useParams
+
+--Hooks starter altid med use. Hooks kan kun blive kaldt inde i en funktions komponent.
+
+--- const  {id} = useParams(); destrukturere et objekt, og id er defineret i vores route inde i main.jsx.
+
+--- vi vil godt hente id'et da der står at vi på detalje siden skal bruge et endpoint med movie-id'et.
+
+--- useParams virker rigtig fint, men da vi skal bruge den i forbindelse med en asynkron funktion, for at hente vores data, skal vi bruge params uden for scopet af vores komponenet. Derfor kan vi ikke bruge useParams lige nu. 
+
 
 ### cast billeder
 søg på id/credits, der vil du finde billederne til casten.
 
 ### play trailer
 -- api get details supportere append_to_repsponse, kan man lave en single response, tilføj denne til apiet for get details. Kan du se at filmen kommer fra Youtube og hvilken nøgle den har. hvis du indsætter keyen til et youtube link vil traileren komme op. Derfor er det key'en du skal gøre dynamisk får at få trailerne ind på din side.
+
+--- vælg indlejre video, vælg iFrame. Indsæt i StyledHeader
