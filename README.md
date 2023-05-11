@@ -326,3 +326,20 @@ under komponenetet {props.voteAverage}
 
 --- find et baseURL til at sætte foran poster_path
 --- ændre image src{`baseurl indsættes hardcodet/${data.poster_path}} i base url'en kunne man sætte w ned til 200 som det mindste. Efterfølgende styling af width laves med props
+
+### ang filmenes tid:
+-- varigheden af filmene ligger under et andet endpoint, og vil skulle kaldes hver gang man har en film, hvilket et er ressource krævende, men som muligvis også vil konflikte med hvor mange kald til at API vi kan lave. 
+--- derfor overvejer vi om vi kan flytte tidspunktet til et andet sted i appen.
+
+### useParams
+bruges til at hooke et id til urlen
+--- når de hedder noget med USE er det fordi de er preprogrammerede med nogle funktioner, disse kan kun bruges inden for scopet af et komponenet.
+--- scopet er vores komponenet, og ikke i vores asynkrone funktion hvor dataen bliver hentet fra APIet
+
+--- derfor kan man ikke bruge useParams hook, da loader er en asynkron funktion. Derfor har de oprettet en params, som man kan bruge. 
+
+### cast billeder
+søg på id/credits, der vil du finde billederne til casten.
+
+### play trailer
+-- api get details supportere append_to_repsponse, kan man lave en single response, tilføj denne til apiet for get details. Kan du se at filmen kommer fra Youtube og hvilken nøgle den har. hvis du indsætter keyen til et youtube link vil traileren komme op. Derfor er det key'en du skal gøre dynamisk får at få trailerne ind på din side.

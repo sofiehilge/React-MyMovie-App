@@ -16,7 +16,7 @@ const NowShowing = () => {
 
   return (
     <>
-      {MovieCardData.results.map((data) => (
+      {MovieCardData.nowShowing.map((data) => (
         <Link to={`details/${data.id}`} key={data.id}>
           <StyledArticle>
             <figure>
@@ -45,12 +45,6 @@ const NowShowing = () => {
   );
 };
 
-export async function loader() {
-  const res = await fetch(
-    "https://api.themoviedb.org/3/movie/now_playing/?api_key="
-  );
-  const data = await res.json();
-  return data;
-}
+
 
 export default NowShowing;

@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import DetailApp from "./pages/DetailApp";
-import ListView from "./pages/ListView";
+import {listViewData} from "./pages/ListView";
 import ErrorView from "./pages/ErrorView";
+import ListView from "./pages/ListView";
 
 import {
   createBrowserRouter,
@@ -11,7 +12,7 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
-import { loader as movieCardDataLoader } from "./templates/NowShowing";
+//import { loader as movieCardDataLoader } from "./templates/NowShowing";
 
 
 
@@ -19,9 +20,9 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     /* Det er denne der muliggøre at skabe struktur for elementerne */
     <Route path="/" element={<App />} errorElement={<ErrorView/>}>{/* Her kan vi få den til at vise en bestemt side, hvis der er en fejl på siden */}
-      {" "}
+  
       {/* Entry point, eg. dr.dk uden noge /page1 etc. */}
-      <Route index loader={movieCardDataLoader} element={<ListView />} />
+      <Route index loader={listViewData} element={<ListView />} />
       <Route path="/details/:id" element={<DetailApp />} />{" "}
       {/* details, kan man selv opfinde. det skal bare matche det som sendes op i URL'en */}
     </Route>

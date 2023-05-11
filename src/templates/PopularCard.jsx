@@ -7,7 +7,6 @@ import Time from "../components/Time";
 import { Link, useLoaderData } from "react-router-dom";
 
 const StyledArticle = styled.article`
-  height: 283px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -30,7 +29,7 @@ const PopularCard = () => {
 
   return (
     <>
-      {MovieCardData.results.map((data) => (
+      {MovieCardData.popular.map((data) => (
         <Link to={`details/${data.id}`} key={data.id}>
           <StyledArticle>
             <figure>
@@ -41,15 +40,7 @@ const PopularCard = () => {
               />
             </figure>
             <StyledDiv>
-              <Heading
-                title={
-                  data.title.length > 25
-                    ? data.title.split(" ").slice(0, 3).join(" ") + "..."
-                    : data.title
-                }
-                size="14"
-                as="h3"
-              />
+              <Heading size="14" as="h3" />
               <MovieRating />
               <StyledFlexContainer className="flexContainer">
                 <ThemeItem title="Horror" />
