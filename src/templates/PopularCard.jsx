@@ -4,7 +4,7 @@ import Heading from "../components/Heading";
 import MovieRating from "../components/MovieRating";
 import ThemeItem from "../components/ThemeItem";
 import Time from "../components/Time";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const StyledArticle = styled.article`
   display: flex;
@@ -25,6 +25,7 @@ const StyledFlexContainer = styled.div`
 `;
 
 const PopularCard = () => {
+
   const MovieCardData = useLoaderData();
 
   return (
@@ -41,7 +42,7 @@ const PopularCard = () => {
             </figure>
             <StyledDiv>
               <Heading size="14" as="h3" />
-              <MovieRating />
+              <MovieRating voteAverage={data.vote_average} />
               <StyledFlexContainer className="flexContainer">
                 <ThemeItem title="Horror" />
                 <ThemeItem title="Mystery" />
