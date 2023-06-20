@@ -8,6 +8,7 @@ import MovieDescription from "../templates/MovieDescription";
 import Heading from "../components/Heading";
 import SeeMoreButton from "../components/SeeMoreButton";
 import CastImage from "../components/CastImage";
+import styled from "styled-components";
 
 /* import Footer from "./templates/Footer"; */
 /* import { useLoaderData } from "react-router-dom"; */
@@ -16,7 +17,9 @@ import { useLoaderData } from "react-router-dom";
 
 const DetailApp = () => {
 
-  
+  const StyledDiv = styled.div`
+    display: flex;
+  `
 
   return (
     <>
@@ -27,7 +30,10 @@ const DetailApp = () => {
         <Heading title="Cast" size="16" as="h2" />
         <SeeMoreButton />
       </div>
-      <CastImage/>
+      <StyledDiv>
+         <CastImage/>
+      </StyledDiv>
+     
     </>
   );
 };

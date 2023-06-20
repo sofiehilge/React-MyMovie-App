@@ -1,22 +1,17 @@
 import styled from "styled-components";
-import { HiOutlineClock }  from "react-icons/hi"; //react-icons giver adgang til filen, FaStar er navnet på ikonet¨
 
-const StyledClock = styled(HiOutlineClock)`
-  color: #000;
-`;
 const StyledP = styled.p`
-  color: #000;
+  color: rgb 156, 156, 156;
 /*   margin-left: 4px; */
 `;
 const StyledDiv = styled.div`
   display: flex;
 `;
 
-const Time = () => {
+const Time = (props) => {
   return (
     <StyledDiv> {/* Her bruger vi en div som container, da vi skal bruge den til styling. */}
-      <StyledClock />
-      <StyledP>1h 47m</StyledP>
+      <StyledP>Release: {props.date}</StyledP>
     </StyledDiv>
   );
 };

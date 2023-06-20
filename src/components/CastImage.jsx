@@ -10,6 +10,12 @@ const StyledImg = styled.img`
   border-radius: 5%;
   height: 78px;
   width: 78px;
+  object-fit: cover;
+`;
+
+const StyledDiv = styled.div`
+  display: flex;
+  flex: wrap;
 `;
 
 const CastImage = () => {
@@ -17,7 +23,9 @@ const CastImage = () => {
   return (
     <>
       {cast.map((data) => (
-        <div className="flexContainer space-between padding" key={data.id}>
+        <StyledDiv className="space"
+          key={data.id}
+        >
           <figure className="flexContainer column">
             <StyledImg
               src={`https://image.tmdb.org/t/p/w200/${data.profile_path}`}
@@ -25,7 +33,7 @@ const CastImage = () => {
             />
             <Paragraf tekst={data.name} size="12" color="110E47" />
           </figure>
-        </div>
+        </StyledDiv>
       ))}
     </>
   );

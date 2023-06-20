@@ -30,7 +30,7 @@ const StyledBookmark = styled(BsBookmark)`
   cursor: pointer;
   outline: inherit;
   gap: 30px;
-  font-size: 3rem;
+  font-size: 1rem;
 `;
 const StyledThemeContainer = styled.div`
   gap: 5px;
@@ -54,6 +54,7 @@ const StyledColumn = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 
 const MovieDetails = () => {
   /* Skal du have rating skal du skrive det her op. */
@@ -86,6 +87,22 @@ const MovieDetails = () => {
       </StyledLengthDetails>
     </StyledMovieDetails>
   );
+};
+
+export const DetailsViewData = async ({ params }) => {
+  return Promise.allSettled([
+    axios(
+      `http://api.themoviedb.org/3/movie/${params.id}?api_key=46c585d48459a26f69c1d564844e723c&append_to_response=videos`
+    ),
+    axios(
+      `http://api.themoviedb.org/3/movie/${params.id}/credits?api_key=46c585d48459a26f69c1d564844e723c`
+    ),
+  ]).then((data) => {
+    return {
+      details: data[0].value.data,
+      cast: data[1].value.data,
+    };
+  });
 };
 
 export default MovieDetails;

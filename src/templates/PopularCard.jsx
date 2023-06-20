@@ -48,7 +48,7 @@ const PopularCard = () => {
                 <ThemeItem title="Mystery" />
                 <ThemeItem title="Thriller" />
               </StyledFlexContainer>
-              <Time />
+              <Time date={data.release_date}/>
             </StyledDiv>
           </StyledArticle>
         </Link>
