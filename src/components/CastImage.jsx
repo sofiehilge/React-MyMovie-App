@@ -3,8 +3,9 @@ import styled from "styled-components";
 /* import zendaya from "../assets/zendaya.png";
 import benedict from "../assets/benedict.png";
 import jacon from "../assets/jacon.png"; */
-import Paragraf from "../components/Paragraf";
+
 import { useLoaderData } from "react-router-dom";
+
 
 const StyledImg = styled.img`
   border-radius: 5%;
@@ -13,9 +14,19 @@ const StyledImg = styled.img`
   object-fit: cover;
 `;
 
-const StyledDiv = styled.div`
-  display: flex;
-  flex: wrap;
+const StyledFig = styled.figure`
+ width: 78px;
+ height: 78px;
+ padding: 1rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+`;
+
+const StyledFigcaption = styled.figcaption`
+  word-wrap: break-word;
+  font-size: 12px;
+  color: #110e47;
 `;
 
 const CastImage = () => {
@@ -23,17 +34,13 @@ const CastImage = () => {
   return (
     <>
       {cast.map((data) => (
-        <StyledDiv className="space"
-          key={data.id}
-        >
-          <figure className="flexContainer column">
-            <StyledImg
-              src={`https://image.tmdb.org/t/p/w200/${data.profile_path}`}
-              alt="portrait"
-            />
-            <Paragraf tekst={data.name} size="12" color="110E47" />
-          </figure>
-        </StyledDiv>
+        <StyledFig key={data.id}>
+          <StyledImg
+            src={`https://image.tmdb.org/t/p/w200/${data.profile_path}`}
+            alt="portrait"
+          />
+          <StyledFigcaption>{data.name}</StyledFigcaption>
+        </StyledFig>
       ))}
     </>
   );

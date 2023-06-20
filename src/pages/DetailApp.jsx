@@ -16,10 +16,14 @@ import axios from "axios";
 import { useLoaderData } from "react-router-dom";
 
 const DetailApp = () => {
-
   const StyledDiv = styled.div`
     display: flex;
-  `
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-basis: 20%;
+    margin-bottom: 1rem;
+  padding: 1rem;
+  `;
 
   return (
     <>
@@ -31,9 +35,8 @@ const DetailApp = () => {
         <SeeMoreButton />
       </div>
       <StyledDiv>
-         <CastImage/>
+        <CastImage />
       </StyledDiv>
-     
     </>
   );
 };
@@ -45,12 +48,12 @@ export const movieDetailAppData = async (id) => {
     ),
     await axios(
       `https://api.themoviedb.org/3/movie/${id}/credits?api_key=46c585d48459a26f69c1d564844e723c`
-    ), /* Herefter tilføjes &append_to_response=videos for så kan man hente en base url til youtube og sætte api end pointet på. */
+    ) /* Herefter tilføjes &append_to_response=videos for så kan man hente en base url til youtube og sætte api end pointet på. */,
   ]).then((values) => {
     console.log("Value: ", values);
     return {
       movie: values[0].value.data,
-      cast: values[1].value.data.cast,/* Der ligger to cast,  */
+      cast: values[1].value.data.cast /* Der ligger to cast,  */,
     };
   });
 };

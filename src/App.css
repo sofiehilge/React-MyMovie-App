@@ -43,6 +43,9 @@ h5 {
   align-items: center;
 }
 
+.wrap{
+  flex-wrap: wrap;
+}
 .row {
   flex-direction: row;
 }
