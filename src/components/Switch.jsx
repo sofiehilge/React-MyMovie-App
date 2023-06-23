@@ -3,7 +3,10 @@ import { useState } from "react";
 import ReactSwitch from "react-switch";
 
 const StyledSwitch = styled(ReactSwitch)`
-  grid-column-start: 3; /* switch componentet skal ligge sig i colonne 3 og ude til højr */
+ grid-column-start: 3;
+  grid-row-start: 1;
+  margin-top: 2rem;
+  margin-right: 2rem;
   justify-self: end;
 `;
 const Switch = () => {

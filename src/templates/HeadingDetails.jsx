@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import backgroundImage from "../assets/backgroundimage.png";
-import Switch from "../components/Switch";
+/* import Switch from "../components/Switch"; */
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link, useLoaderData } from "react-router-dom";
+import Switch from "../components/Switch";
 
 const StyledHeading = styled.header`
   background-image: url(${backgroundImage});
@@ -10,7 +11,7 @@ const StyledHeading = styled.header`
   background-size: cover;
   height: 300px;
   display: grid;
-  grid-template-columns: 2;
+  grid-template-columns: 3;
 `;
 
 const StyledLink = styled(Link)`
@@ -24,21 +25,19 @@ const StyledLink = styled(Link)`
 
 const StyledIframe = styled.iframe`
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 4;
   grid-row-start: 1;
 `;
-
+/* 
 const StyledSwitch = styled(Switch)`
-  grid-column-start: 2;
-  margin-top: 2rem;
-  margin-right: 2rem;
-`;
-const StyledNav = styled.nav`
+  
+`; */
+/* const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 2rem;
 `;
-
+ */
 /* const StyledPlay = styled.div`
   display: flex;
   flex-direction: column;
@@ -69,7 +68,7 @@ const HeadingDetails = () => {
       <StyledLink to="/">
         <AiOutlineArrowLeft />
       </StyledLink>
-      <StyledSwitch justify="end" align="top" />
+      <Switch justify="end" align="top" />
     </StyledHeading>
   );
 };
