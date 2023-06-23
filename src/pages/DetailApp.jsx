@@ -15,7 +15,6 @@ import styled from "styled-components";
 import axios from "axios";
 import { useLoaderData } from "react-router-dom";
 
-const DetailApp = () => {
   const StyledDiv = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -24,6 +23,10 @@ const DetailApp = () => {
     margin-bottom: 1rem;
   padding: 1rem;
   `;
+
+
+const DetailApp = () => {
+
 
   return (
     <>
@@ -44,7 +47,7 @@ const DetailApp = () => {
 export const movieDetailAppData = async (id) => {
   return await Promise.allSettled([
     await axios(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=46c585d48459a26f69c1d564844e723c`
+      `https://api.themoviedb.org/3/movie/${id}?api_key=46c585d48459a26f69c1d564844e723c&append_to_response=videos`
     ),
     await axios(
       `https://api.themoviedb.org/3/movie/${id}/credits?api_key=46c585d48459a26f69c1d564844e723c`

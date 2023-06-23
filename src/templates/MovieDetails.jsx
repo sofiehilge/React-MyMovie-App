@@ -7,18 +7,19 @@ import { BsBookmark } from "react-icons/bs";
 import { useLoaderData } from "react-router-dom";
 
 const StyledMovieDetails = styled.main`
+  position: relative;
   background-color: white;
-  border-top-left-radius: 5%;
-  border-top-right-radius: 5%;
-  margin-top: -2rem;
+  border-radius: 10px 10px 0px 0px;
+  margin-top: -10px;
   padding: 2rem;
+/*   gap: 12px; */
 `;
 
 const StyledFlexbox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 2rem;
+  padding-bottom: 12px;
 `;
 
 const StyledBookmark = styled(BsBookmark)`
@@ -29,14 +30,14 @@ const StyledBookmark = styled(BsBookmark)`
   font: inherit;
   cursor: pointer;
   outline: inherit;
-  gap: 30px;
+ /*  gap: 30px; */
   font-size: 1rem;
 `;
 const StyledThemeContainer = styled.div`
   gap: 5px;
   display: flex;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+/*   padding-top: 2rem; */
+  padding-bottom: 12px;
 `;
 
 const StyledLengthDetails = styled.div`
@@ -55,14 +56,13 @@ const StyledColumn = styled.div`
   flex-direction: column;
 `;
 
-
 const MovieDetails = () => {
   /* Skal du have rating skal du skrive det her op. */
-  const DetailData = useLoaderData();
+  const { movie } = useLoaderData();
   return (
     <StyledMovieDetails>
       <StyledFlexbox>
-        <Heading title={DetailData.title} size="40" as="h3" />
+        <Heading title={movie.title} size="20" as="h3" />
         <StyledBookmark />
       </StyledFlexbox>
       <MovieRating />
@@ -74,35 +74,22 @@ const MovieDetails = () => {
       <StyledLengthDetails>
         <StyledColumn>
           <Heading title="Length" size="12" as="h4" />
-          <Paragraf tekst="2h 28min" size="12" weight="bold" />
+          <Paragraf tekst={movie.runtime} size="12" weight="bold">
+            {" "}
+            min.
+          </Paragraf>
         </StyledColumn>
         <StyledColumn>
           <Heading title="Language" size="12" as="h4" />
-          <Paragraf tekst="English" size="12" weight="bold" />
+          <Paragraf tekst={movie.original_language} size="12" weight="bold" />
         </StyledColumn>
         <StyledColumn>
           <Heading title="Rating" size="12" as="h4" />
-          <Paragraf tekst="PG-13" size="12" weight="bold" />
+          <Paragraf tekst={movie.vote_count} size="12" weight="bold" />
         </StyledColumn>
       </StyledLengthDetails>
     </StyledMovieDetails>
   );
-};
-
-export const DetailsViewData = async ({ params }) => {
-  return Promise.allSettled([
-    axios(
-      `http://api.themoviedb.org/3/movie/${params.id}?api_key=46c585d48459a26f69c1d564844e723c&append_to_response=videos`
-    ),
-    axios(
-      `http://api.themoviedb.org/3/movie/${params.id}/credits?api_key=46c585d48459a26f69c1d564844e723c`
-    ),
-  ]).then((data) => {
-    return {
-      details: data[0].value.data,
-      cast: data[1].value.data,
-    };
-  });
 };
 
 export default MovieDetails;
