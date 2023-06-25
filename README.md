@@ -357,4 +357,5 @@ søg på id/credits, der vil du finde billederne til casten.
 ### play trailer
 -- api get details supportere append_to_repsponse, kan man lave en single response, tilføj denne til apiet for get details. Kan du se at filmen kommer fra Youtube og hvilken nøgle den har. hvis du indsætter keyen til et youtube link vil traileren komme op. Derfor er det key'en du skal gøre dynamisk får at få trailerne ind på din side.
 
---- vælg indlejre video, vælg iFrame. Indsæt i StyledHeader
+--- vælg indlejre video, vælg iFrame. Indsæt i StyledHeader#   M y M o v i e A p p D y n  
+ 
