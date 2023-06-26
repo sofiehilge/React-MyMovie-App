@@ -2,7 +2,7 @@ import Heading from "../components/Heading";
 import PopularCard from "../templates/PopularCard";
 import SeeMoreButton from "../components/SeeMoreButton";
 import Switch from "../components/Switch";
-import Footer from "../templates/footer";
+import Footer from "../templates/Footer";
 import NowShowing from "../templates/NowShowing";
 /* to punktummer for nu er vi i pages mappen og skal hoppe ud af pages mappen og ind i componenet mappen. */
 /* import { useLoaderData } from "react-router-dom"; */
