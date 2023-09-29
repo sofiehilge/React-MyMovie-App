@@ -9,14 +9,14 @@ import NowShowing from "../templates/NowShowing";
 import axios from "axios";
 
 const ListView = () => {
- /*  const ListViewData = useLoaderData(); */
+  /*  const ListViewData = useLoaderData(); */
 
   return (
     <>
-      <header className="gridContainer padding">
-        <Heading title="MyMovies" size="16" as="h1" />
+      <header className="gridContainer header">
         {/* Sådan ser et komponent ud når det bruges i React */}
-        <Switch />
+        <Switch justify="end" align="center" />
+        <Heading title="MyMovies" size="16" as="h1" />
       </header>
       <main className="padding">
         <section>

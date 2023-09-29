@@ -39,7 +39,7 @@ const StyledFilmreel = styled(FcFilmReel)`
 
 const StyledFooter = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   font-size: 1.5rem;
   color: #bcbccd;
@@ -50,7 +50,7 @@ const StyledFooter = styled.div`
   font: inherit;
   cursor: pointer;
   outline: inherit;
-  gap: 30px;
+  gap: 70px;
   padding: 2rem;
 `;
 

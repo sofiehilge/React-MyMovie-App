@@ -3,17 +3,18 @@ import { useState } from "react";
 import ReactSwitch from "react-switch";
 
 const StyledSwitch = styled(ReactSwitch)`
- grid-column-start: 3;
+  grid-column-start: 3;
   grid-row-start: 1;
-  margin-top: 2rem;
-  margin-right: 2rem;
+  /*   margin-top: 2rem;
+  margin-right: 2rem; */
   justify-self: end;
 `;
 const Switch = () => {
   const [checked, setChecked] = useState(false); /* darkmode er ikke tændt */
   const handleChange = () => {
     /* Som en eventlistener, der her skal ske på onChange */
-    setChecked(!checked);
+    setChecked(!checked); //! er en logical knot, der altid laver en boolean værdi modsat
+    
     /* hernede skriver vi logikken så den kan skifte temaet */
   };
   return (
