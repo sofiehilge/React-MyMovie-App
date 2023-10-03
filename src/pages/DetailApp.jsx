@@ -13,28 +13,29 @@ import styled from "styled-components";
 /* import Footer from "./templates/Footer"; */
 /* import { useLoaderData } from "react-router-dom"; */
 import axios from "axios";
-import { useLoaderData } from "react-router-dom";
 
-  const StyledDiv = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-basis: 20%;
-    margin-bottom: 1rem;
+const StyledDiv = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-basis: 20%;
+  margin-bottom: 1rem;
   padding: 1rem;
-  `;
-
+`;
 
 const DetailApp = () => {
-
-
   return (
     <>
       <HeadingDetails />
       <MovieDetails />
       <MovieDescription />
       <div className="flexContainer space-between padding">
-        <Heading title="Cast" size="16" as="h2" />
+        <Heading
+          className="dark:text-lightblue"
+          title="Cast"
+          size="16"
+          as="h2"
+        />
         <SeeMoreButton />
       </div>
       <StyledDiv>

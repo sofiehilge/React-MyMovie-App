@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Heading from "../components/Heading";
-import Paragraf from "../components/Paragraf";
+
 import { useLoaderData } from "react-router-dom";
 
 const StyledArticle = styled.article`
@@ -22,7 +22,12 @@ const MovieDescription = () => {
   const { movie } = useLoaderData();
   return (
     <StyledArticle>
-      <Heading title="Description" size="16" as="h2" />
+      <Heading
+        className="dark:text-lightblue"
+        title="Description"
+        size="16"
+        as="h2"
+      />
       <StyledP>{movie.overview}</StyledP>
     </StyledArticle>
   );

@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Mulish:wght@300;500;700&display=swap");
 @import "normalize.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #root {
   max-width: 768px;
   /*   padding: 2rem; */
@@ -43,7 +47,7 @@ h5 {
   align-items: center;
 }
 
-.wrap{
+.wrap {
   flex-wrap: wrap;
 }
 .row {
@@ -54,14 +58,13 @@ h5 {
   position: fixed;
 }
 
-header {
+.header {
+  width: calc(100vw - 4rem);
+  padding: 0 2rem;
   height: 60px;
-  grid-template-columns: 1fr 1fr 1fr; /* definere et template for hvordan colonerne skal være */
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-header {
-  height: 60px;
-}
 .movieCardContainer {
   margin: 2rem -2rem;
   gap: 1rem;
@@ -83,7 +86,7 @@ header {
   padding: 2rem;
 }
 
-.space{
+.space {
   padding: 1rem;
 }
 .column {

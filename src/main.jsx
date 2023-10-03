@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import DetailApp, {movieDetailAppData} from "./pages/DetailApp";
+import DetailApp, { movieDetailAppData } from "./pages/DetailApp";
 import { listViewData } from "./pages/ListView";
 import ErrorView from "./pages/ErrorView";
 import ListView from "./pages/ListView";
+import BookmarkApp from "./pages/BookmarkApp";
 
 import {
   createBrowserRouter,
@@ -25,6 +26,11 @@ const router = createBrowserRouter(
         path="/details/:id"
         loader={({ params }) => movieDetailAppData(params.id)}
         element={<DetailApp />}
+      />
+      <Route
+        path="/bookmark"
+        /*   loader={({ params }) => movieDetailAppData(params.id)} */
+        element={<BookmarkApp />}
       />
       {/* details, kan man selv opfinde. det skal bare matche det som sendes op i URL'en */}
     </Route>

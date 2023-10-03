@@ -12,7 +12,9 @@ const Button = styled.button`
 `;
 
 const SeeMoreButton = () => {
-  return <Button>See more</Button>;/* Stadigvæk et komponent, selvom den ikke er selvlukkende */
+  return (
+    <Button className="dark:bg-black">See more</Button>
+  ); /* Stadigvæk et komponent, selvom den ikke er selvlukkende */
 };
 
 export default SeeMoreButton;

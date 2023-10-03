@@ -41,7 +41,7 @@ const PopularCard = () => {
               />
             </figure>
             <StyledDiv>
-              <Heading size="14" as="h3" />
+              <Heading title={data.title} size="14" as="h3" />
               <MovieRating voteAverage={data.vote_average} />
               <StyledFlexContainer className="flexContainer">
                 <ThemeItem title="Horror" />

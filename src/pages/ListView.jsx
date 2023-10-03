@@ -9,19 +9,29 @@ import NowShowing from "../templates/NowShowing";
 import axios from "axios";
 
 const ListView = () => {
- /*  const ListViewData = useLoaderData(); */
+  /*  const ListViewData = useLoaderData(); */
 
   return (
     <>
-      <header className="gridContainer padding">
-        <Heading title="MyMovies" size="16" as="h1" />
+      <header className="gridContainer padding header flex items-end content-start fixed bg-white dark:bg-black">
+        <Heading
+          className="dark:text-lightblue"
+          title="MyMovies"
+          size="16"
+          as="h1"
+        />
         {/* Sådan ser et komponent ud når det bruges i React */}
         <Switch />
       </header>
       <main className="padding">
-        <section>
+        <section className="pt-32">
           <div className="flexContainer space-between">
-            <Heading title="Now Showing" size="16" as="h2" />
+            <Heading
+              className="dark:text-lightblue"
+              title="Now Showing"
+              size="16"
+              as="h2"
+            />
             <SeeMoreButton />
           </div>
           <div className="flexContainer movieCardContainer">
@@ -29,8 +39,13 @@ const ListView = () => {
           </div>
         </section>
         <section>
-          <div className="flexContainer space-between">
-            <Heading title="Popular" size="16" as="h2" />
+          <div className="sticky top-24 pt-2 pb-2 bg-white dark:bg-black flexContainer space-between">
+            <Heading
+              title="Popular"
+              className="dark:text-lightblue"
+              size="16"
+              as="h2"
+            />
             <SeeMoreButton />
           </div>
           <div>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { BsBookmark, BsTicket } from "react-icons/bs";
 import { FcFilmReel } from "react-icons/fc";
+import { Link } from "react-router-dom";
 
 /* const StyledBookmark = styled(BsBookmark)`
   background: none;
@@ -39,27 +40,26 @@ const StyledFilmreel = styled(FcFilmReel)`
 
 const StyledFooter = styled.div`
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
+  height: 60px;
   font-size: 1.5rem;
   color: #bcbccd;
-  padding-top: 10px;
   background: none;
   border: none;
-  padding: 0;
   font: inherit;
   cursor: pointer;
   outline: inherit;
-  gap: 30px;
-  padding: 2rem;
 `;
 
 const FooterButton = () => {
   return (
-    <StyledFooter>
-      <FcFilmReel />
-      <BsTicket />
-      <BsBookmark />
+    <StyledFooter className="dark:bg-black">
+      <FcFilmReel className="dark:text-white" />
+      <BsTicket className="dark:text-white" />
+      <Link to="/bookmark">
+        <BsBookmark className="dark:text-white" />
+      </Link>
     </StyledFooter>
   );
 };

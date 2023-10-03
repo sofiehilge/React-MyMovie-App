@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import anonym from "../assets/anonym.png"
+import anonym from "../assets/anonym.png";
 // import tom from "../assets/tom.png";
 // import zendaya from "../assets/zendaya.png";
 // import benedict from "../assets/benedict.png";
@@ -44,7 +44,9 @@ const CastImage = () => {
             }
             alt="portrait"
           />
-          <StyledFigcaption>{data.name}</StyledFigcaption>
+          <StyledFigcaption className="dark:text-white">
+            {data.name}
+          </StyledFigcaption>
         </StyledFig>
       ))}
     </>

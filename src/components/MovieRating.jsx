@@ -15,7 +15,6 @@ const StyledDiv = styled.div`
 const MovieRating = (props) => {
   return (
     <StyledDiv>
-      {" "}
       {/* Her bruger vi en div som container, da vi skal bruge den til styling. */}
       <StyledFaStar />
       <StyledP>{props.voteAverage}/10 IMDb</StyledP>

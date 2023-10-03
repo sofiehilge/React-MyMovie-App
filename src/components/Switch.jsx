@@ -1,19 +1,20 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useOutletContext } from "react-router";
 import ReactSwitch from "react-switch";
 
 const StyledSwitch = styled(ReactSwitch)`
- grid-column-start: 3;
+  grid-column-start: 3;
   grid-row-start: 1;
   margin-top: 2rem;
   margin-right: 2rem;
   justify-self: end;
 `;
-const Switch = () => {
-  const [checked, setChecked] = useState(false); /* darkmode er ikke tændt */
+const Switch = (props) => {
+  const [darkmode, setDarkmode] = useOutletContext();
+
   const handleChange = () => {
     /* Som en eventlistener, der her skal ske på onChange */
-    setChecked(!checked);
+    setDarkmode(!darkmode);
     /* hernede skriver vi logikken så den kan skifte temaet */
   };
   return (
@@ -27,8 +28,8 @@ const Switch = () => {
       onHandleColor="#000000"
       uncheckedIcon={false}
       checkedIcon={false}
+      checked={darkmode}
       onChange={handleChange}
-      checked={checked}
     />
   ); /* onChange definere hvad der skal ske når usedState bliver true */
 };

@@ -4,15 +4,17 @@ import MovieRating from "../components/MovieRating";
 import ThemeItem from "../components/ThemeItem";
 import Paragraf from "../components/Paragraf";
 import { BsBookmark } from "react-icons/bs";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 
 const StyledMovieDetails = styled.main`
   position: relative;
-  background-color: white;
-  border-radius: 10px 10px 0px 0px;
-  margin-top: -10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
   padding: 2rem;
-/*   gap: 12px; */
+  margin-top: -10px;
 `;
 
 const StyledFlexbox = styled.div`
@@ -30,13 +32,13 @@ const StyledBookmark = styled(BsBookmark)`
   font: inherit;
   cursor: pointer;
   outline: inherit;
- /*  gap: 30px; */
+  /*  gap: 30px; */
   font-size: 1rem;
 `;
 const StyledThemeContainer = styled.div`
   gap: 5px;
   display: flex;
-/*   padding-top: 2rem; */
+  /*   padding-top: 2rem; */
   padding-bottom: 12px;
 `;
 
@@ -60,10 +62,11 @@ const MovieDetails = () => {
   /* Skal du have rating skal du skrive det her op. */
   const { movie } = useLoaderData();
   return (
-    <StyledMovieDetails>
+    <StyledMovieDetails className="dark:bg-black">
       <StyledFlexbox>
         <Heading title={movie.title} size="20" as="h3" />
-        <StyledBookmark />
+
+        <StyledBookmark className="dark:text-white" />
       </StyledFlexbox>
       <MovieRating />
       <StyledThemeContainer>
@@ -73,19 +76,51 @@ const MovieDetails = () => {
       </StyledThemeContainer>
       <StyledLengthDetails>
         <StyledColumn>
-          <Heading title="Length" size="12" as="h4" />
-          <Paragraf tekst={movie.runtime} size="12" weight="bold">
-            {" "}
+          <Heading
+            className="dark:text-gray"
+            title="Length"
+            size="12"
+            color="9C9C9C"
+            as="h4"
+          />
+          <Paragraf
+            className="dark:text-white"
+            tekst={movie.runtime}
+            size="12"
+            weight="bold"
+          >
             min.
           </Paragraf>
         </StyledColumn>
         <StyledColumn>
-          <Heading title="Language" size="12" as="h4" />
-          <Paragraf tekst={movie.original_language} size="12" weight="bold" />
+          <Heading
+            className="dark:text-gray"
+            title="Language"
+            size="12"
+            color="9C9C9C"
+            as="h4"
+          />
+          <Paragraf
+            className="dark:text-white"
+            tekst={movie.original_language}
+            size="12"
+            weight="bold"
+          />
         </StyledColumn>
         <StyledColumn>
-          <Heading title="Rating" size="12" as="h4" />
-          <Paragraf tekst={movie.vote_count} size="12" weight="bold" />
+          <Heading
+            className="dark:text-gray"
+            title="Rating"
+            size="12"
+            color="9C9C9C"
+            as="h4"
+          />
+          <Paragraf
+            className="dark:text-white"
+            tekst={movie.vote_count}
+            size="12"
+            weight="bold"
+          />
         </StyledColumn>
       </StyledLengthDetails>
     </StyledMovieDetails>
