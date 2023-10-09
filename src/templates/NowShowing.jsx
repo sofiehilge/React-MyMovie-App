@@ -13,6 +13,7 @@ const StyledArticle = styled.article`
 
 const NowShowing = () => {
   const MovieCardData = useLoaderData(); /* Denne bruger man som hook til at få dataen ud af requesten. */
+  /* useLoaderData, preloader dataen, det vil vi gerne på liste, for at den vises når appen åbner, men ikke i bookmark, da det gør det meget langsomt */
 
   return (
     <>

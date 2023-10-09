@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 export function useBookmark(id) {
   /* det får vi fra vores useParams på detalje siden, på den måde kan vi tjekke om id'et er bookmarked eller ej */
   const [favorite, setFavorite] = useState(undefined);
+  
   useEffect(() => {
     const options = {
       method: "GET",

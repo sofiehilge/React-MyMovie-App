@@ -24,7 +24,7 @@ export function useFavorite(id) {
         setFavorite(isFavorite);
       }) /* some iterere igennem listen og sammenligner idet og returnere kun dem der matcher. */
       .catch((err) => console.error(err));
-  }, []);
+  }, []); //dependency array, defines dependency for the effect- til formål at den kun opdateres ved initial render.
 
   return favorite;
 }
