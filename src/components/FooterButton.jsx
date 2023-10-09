@@ -55,7 +55,10 @@ const StyledFooter = styled.div`
 const FooterButton = () => {
   return (
     <StyledFooter className="dark:bg-black">
-      <FcFilmReel className="dark:text-white" />
+      <Link to="/">
+        <FcFilmReel className="dark:text-white" />
+      </Link>
+
       <BsTicket className="dark:text-white" />
       <Link to="/bookmark">
         <BsBookmark className="dark:text-white" />

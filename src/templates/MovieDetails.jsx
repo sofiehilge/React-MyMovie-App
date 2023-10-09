@@ -3,14 +3,14 @@ import Heading from "../components/Heading";
 import MovieRating from "../components/MovieRating";
 import ThemeItem from "../components/ThemeItem";
 import Paragraf from "../components/Paragraf";
-import { BsBookmark } from "react-icons/bs";
-import { useLoaderData, Link } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
+import Bookmark from "../components/Bookmark";
 
 const StyledMovieDetails = styled.main`
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+
   background-color: #fff;
   border-radius: 10px 10px 0 0;
   padding: 2rem;
@@ -24,17 +24,6 @@ const StyledFlexbox = styled.div`
   padding-bottom: 12px;
 `;
 
-const StyledBookmark = styled(BsBookmark)`
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-  /*  gap: 30px; */
-  font-size: 1rem;
-`;
 const StyledThemeContainer = styled.div`
   gap: 5px;
   display: flex;
@@ -65,8 +54,7 @@ const MovieDetails = () => {
     <StyledMovieDetails className="dark:bg-black">
       <StyledFlexbox>
         <Heading title={movie.title} size="20" as="h3" />
-
-        <StyledBookmark className="dark:text-white" />
+        <Bookmark className="dark:text-white" />
       </StyledFlexbox>
       <MovieRating />
       <StyledThemeContainer>

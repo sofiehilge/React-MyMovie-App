@@ -13,7 +13,7 @@ const ListView = () => {
 
   return (
     <>
-      <header className="gridContainer padding header flex items-end content-start fixed bg-white dark:bg-black">
+      <header className="gridContainer header flex items-end content-start pt-2 h-8 fixed bg-white dark:bg-black">
         <Heading
           className="dark:text-lightblue"
           title="MyMovies"
@@ -21,10 +21,12 @@ const ListView = () => {
           as="h1"
         />
         {/* Sådan ser et komponent ud når det bruges i React */}
-        <Switch />
+        <div className="flex justify-end">
+          <Switch />
+        </div>
       </header>
       <main className="padding">
-        <section className="pt-32">
+        <section className="pt-24">
           <div className="flexContainer space-between">
             <Heading
               className="dark:text-lightblue"
@@ -39,7 +41,7 @@ const ListView = () => {
           </div>
         </section>
         <section>
-          <div className="sticky top-24 pt-2 pb-2 bg-white dark:bg-black flexContainer space-between">
+          <div className="sticky top-14 pt-2 pb-2 bg-white dark:bg-black flexContainer space-between">
             <Heading
               title="Popular"
               className="dark:text-lightblue"

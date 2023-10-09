@@ -9,6 +9,7 @@ import Heading from "../components/Heading";
 import SeeMoreButton from "../components/SeeMoreButton";
 import CastImage from "../components/CastImage";
 import styled from "styled-components";
+import Footer from "../templates/Footer";
 
 /* import Footer from "./templates/Footer"; */
 /* import { useLoaderData } from "react-router-dom"; */
@@ -20,7 +21,7 @@ const StyledDiv = styled.div`
   justify-content: space-between;
   flex-basis: 20%;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 0 1rem 4rem 1rem;
 `;
 
 const DetailApp = () => {
@@ -41,6 +42,7 @@ const DetailApp = () => {
       <StyledDiv>
         <CastImage />
       </StyledDiv>
+      <Footer />
     </>
   );
 };

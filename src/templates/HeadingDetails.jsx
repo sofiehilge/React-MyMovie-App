@@ -57,7 +57,7 @@ const HeadingDetails = () => {
   return (
     <StyledHeading>
       <StyledIframe
-        width="100%"
+        width="99%"
         height="100%"
         src={`https://www.youtube.com/embed/${movie.videos.results[0].key}`}
         title="YouTube video player"
