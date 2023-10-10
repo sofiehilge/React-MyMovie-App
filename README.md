@@ -363,3 +363,16 @@ søg på id/credits, der vil du finde billederne til casten.
 
 ----------add favorites-----------------
 https://developer.themoviedb.org/reference/account-get-favorites
+
+Størrelser i tailwind? hvordan går jeg fra px til tailwind?
+
+hvor kommer id til vores useParams fra i bookmark.jsx? den bliver sendt med som loader i vores main.jsx
+
+hvordan kan jeg lave en heading komponent som medsender props i tailwind?
+
+hvordan bruger man calc med tailwind min-height-screen?
+
+
+
+hvordan er vores api kald i detailApp(movieDetailAppData) forbundet med vores userLoaderDAta?
+

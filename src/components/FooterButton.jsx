@@ -58,7 +58,6 @@ const FooterButton = () => {
       <Link to="/">
         <FcFilmReel className="dark:text-white" />
       </Link>
-
       <BsTicket className="dark:text-white" />
       <Link to="/bookmark">
         <BsBookmark className="dark:text-white" />

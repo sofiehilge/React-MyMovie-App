@@ -2,7 +2,8 @@ import React from "react";
 import { useEffect, useState, useLoaderData } from "react";
 
 const Favorite = () => {
-  let id = 550; // useparams
+  const { id } =
+    useParams();
   const [bookmark, setBookmark] = useState(false);
   useEffect(() => {
     const options = {
@@ -22,7 +23,7 @@ const Favorite = () => {
 
     fetch("https://api.themoviedb.org/3/account/19377915/favorite", options)
       .then((response) => response.json())
-      .then((response) => console.log(response))
+      .then((response) => console.log(response))/* her kan vi selv bestemme om vi vil bruge et state, skrive noget jsx eller console.loge! */
       .catch((err) => console.error(err));
   }, [bookmark]);
 
