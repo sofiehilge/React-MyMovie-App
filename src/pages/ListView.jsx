@@ -63,14 +63,10 @@ const ListView = () => {
 export const listViewData = async () => {
   return await Promise.allSettled([
     await axios(
-      `https://api.themoviedb.org/3/movie/now_playing/?api_key=${
-        import.meta.env.VITE_TMBD_API_KEY
-      }`
+      `https://api.themoviedb.org/3/movie/now_playing/?api_key=f6f47466aabb06667d5e15a3ed8e77a9`
     ) /* Vi kan importere noget som ligger i en enviorenment variable */,
     await axios(
-      `https://api.themoviedb.org/3/movie/popular/?api_key=${
-        import.meta.env.VITE_TMBD_API_KEY
-      }`
+      `https://api.themoviedb.org/3/movie/popular/?api_key=f6f47466aabb06667d5e15a3ed8e77a9`
     ),
   ]).then((values) => {
     console.log("Value: ", values);

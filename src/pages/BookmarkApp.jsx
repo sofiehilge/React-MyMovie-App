@@ -18,7 +18,7 @@ const BookmarkApp = () => {
       headers: {
         accept: "application/json",
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NmM1ODVkNDg0NTlhMjZmNjljMWQ1NjQ4NDRlNzIzYyIsInN1YiI6IjY0NThhYmFmMTU2Y2M3MDE1ZTc2Y2MwZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.S-ZwpBQ3wzAdUPml2iesppkiSjjSZnIR33ijQ7QcRA8",
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNmY0NzQ2NmFhYmIwNjY2N2Q1ZTE1YTNlZDhlNzdhOSIsInN1YiI6IjY0NThhYmFmMTU2Y2M3MDE1ZTc2Y2MwZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.POw3YsVvhBejuI-xAT8xvwV9QKg8QSoCARfQzH76uhY",
       }, //"Bearer" + import.meta.env.VITE_TMBD---
     };
 
@@ -35,7 +35,7 @@ const BookmarkApp = () => {
       headers: {
         accept: "application/json",
         Authorization:
-          "Bearer" + import.meta.env.VITE_TMBD_TOKEN_KEY,
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNmY0NzQ2NmFhYmIwNjY2N2Q1ZTE1YTNlZDhlNzdhOSIsInN1YiI6IjY0NThhYmFmMTU2Y2M3MDE1ZTc2Y2MwZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.POw3YsVvhBejuI-xAT8xvwV9QKg8QSoCARfQzH76uhY",
       },
     };
 
@@ -92,7 +92,6 @@ const BookmarkApp = () => {
                 </div>
                 <div className="flex gap-4">
                   <ThemeItem />
-                 
                 </div>
               </Link>
             )

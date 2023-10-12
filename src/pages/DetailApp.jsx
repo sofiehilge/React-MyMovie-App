@@ -1,4 +1,3 @@
-
 import HeadingDetails from "../templates/HeadingDetails";
 import MovieDetails from "../templates/MovieDetails";
 import MovieDescription from "../templates/MovieDescription";
@@ -7,7 +6,6 @@ import SeeMoreButton from "../components/SeeMoreButton";
 import CastImage from "../components/CastImage";
 import styled from "styled-components";
 import Footer from "../templates/Footer";
-
 
 import axios from "axios";
 
@@ -46,14 +44,10 @@ const DetailApp = () => {
 export const movieDetailAppData = async (id) => {
   return await Promise.allSettled([
     await axios(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=${
-        import.meta.env.VITE_TMBD_API_KEY
-      }&append_to_response=videos`
+      `https://api.themoviedb.org/3/movie/${id}?api_key=f6f47466aabb06667d5e15a3ed8e77a9&append_to_response=videos`
     ),
     await axios(
-      `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${
-        import.meta.env.VITE_TMBD_API_KEY
-      }`
+      `https://api.themoviedb.org/3/movie/${id}/credits?api_key=f6f47466aabb06667d5e15a3ed8e77a9`
     ) /* Herefter tilføjes &append_to_response=videos for så kan man hente en base url til youtube og sætte api end pointet på. */,
     /* her bliver data konverteret til json under hjelmen */
   ]).then((values) => {

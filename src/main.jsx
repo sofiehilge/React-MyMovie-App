@@ -1,19 +1,19 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import DetailApp, { movieDetailAppData } from "./pages/DetailApp";
 import { listViewData } from "./pages/ListView";
 import ErrorView from "./pages/ErrorView";
 import ListView from "./pages/ListView";
-import BookmarkApp from "./pages/BookmarkApp";
-
+import LoadingView from "./pages/LoadingView";
+// import BookmarkApp from "./pages/BookmarkApp";
+const LazyBookmarkApp = React.lazy(() => import("./pages/BookmarkApp"));
 import {
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
   Route,
 } from "react-router-dom";
-//import { loader as movieCardDataLoader } from "./templates/NowShowing";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,13 +26,17 @@ const router = createBrowserRouter(
         path="/details/:id"
         loader={({ params }) => movieDetailAppData(params.id)}
         element={<DetailApp />}
+        /* details, kan man selv opfinde. det skal bare matche det som sendes op i URL'en */
       />
       <Route
         path="/bookmark"
-        /*   loader={({ params }) => movieDetailAppData(params.id)} */
-        element={<BookmarkApp />}
+        element={
+          <Suspense fallback={<LoadingView />}>
+            <LazyBookmarkApp />
+          </Suspense>
+        }
+        /* Suspense venter på at det vi har kaldter loadet, for i det øjeblik den er loadet, så viser fjerner den vores fallback */
       />
-      {/* details, kan man selv opfinde. det skal bare matche det som sendes op i URL'en */}
     </Route>
   )
 ); /* NU har vi oprettet vores router */
