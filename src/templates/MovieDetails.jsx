@@ -58,9 +58,15 @@ const MovieDetails = () => {
       </StyledFlexbox>
       <MovieRating />
       <StyledThemeContainer>
-        <ThemeItem title="Action" />
-        <ThemeItem title="Adventure" />
-        <ThemeItem title="Fantasy" />
+        {/* {data.genre_ids.map((movieGenreId) => (
+                  <ThemeItem
+                    key={movieGenreId}
+                    title={getGenreNameById(movieGenreId, MovieCardData.genre)}
+                  />
+                ))}  */}
+        {movie.genres.map((movieGenreName, index) => (
+          <ThemeItem key={index} title={movieGenreName.name} />
+        ))}
       </StyledThemeContainer>
       <StyledLengthDetails>
         <StyledColumn>

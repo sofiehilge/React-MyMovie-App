@@ -4,7 +4,7 @@ import Heading from "../components/Heading";
 import MovieRating from "../components/MovieRating";
 import ThemeItem from "../components/ThemeItem";
 import Time from "../components/Time";
-import { Link, useLoaderData} from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const StyledArticle = styled.article`
   display: flex;
@@ -25,8 +25,13 @@ const StyledFlexContainer = styled.div`
 `;
 
 const PopularCard = () => {
-
   const MovieCardData = useLoaderData();
+
+  function getGenreNameById(movieGenreId, genres) {
+    const genre = genres.find((genre) => genre.id === movieGenreId);
+
+    return genre ? genre.name : "Ukendt genre";
+  }
 
   return (
     <>
@@ -44,11 +49,14 @@ const PopularCard = () => {
               <Heading title={data.title} size="14" as="h3" />
               <MovieRating voteAverage={data.vote_average} />
               <StyledFlexContainer className="flexContainer">
-                <ThemeItem title="Horror" />
-                <ThemeItem title="Mystery" />
-                <ThemeItem title="Thriller" />
+                {data.genre_ids.map((movieGenreId) => (
+                  <ThemeItem
+                    key={movieGenreId}
+                    title={getGenreNameById(movieGenreId, MovieCardData.genre)}
+                  />
+                ))}
               </StyledFlexContainer>
-              <Time date={data.release_date}/>
+              <Time date={data.release_date} />
             </StyledDiv>
           </StyledArticle>
         </Link>

@@ -3,14 +3,14 @@ import { useState, useEffect } from "react";
 export function useBookmark(id) {
   /* det får vi fra vores useParams på detalje siden, på den måde kan vi tjekke om id'et er bookmarked eller ej */
   const [favorite, setFavorite] = useState(undefined);
-  
+
   useEffect(() => {
     const options = {
       method: "GET",
       headers: {
         accept: "application/json",
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NmM1ODVkNDg0NTlhMjZmNjljMWQ1NjQ4NDRlNzIzYyIsInN1YiI6IjY0NThhYmFmMTU2Y2M3MDE1ZTc2Y2MwZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.S-ZwpBQ3wzAdUPml2iesppkiSjjSZnIR33ijQ7QcRA8",
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNmY0NzQ2NmFhYmIwNjY2N2Q1ZTE1YTNlZDhlNzdhOSIsInN1YiI6IjY0NThhYmFmMTU2Y2M3MDE1ZTc2Y2MwZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.POw3YsVvhBejuI-xAT8xvwV9QKg8QSoCARfQzH76uhY",
       },
     };
 

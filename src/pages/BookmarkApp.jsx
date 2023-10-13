@@ -29,24 +29,25 @@ const BookmarkApp = () => {
       .then((response) => response.json())
       .then((response) => setFavoriteListData(response))
       .catch((err) => console.error(err));
-    /* -----------------------fetch genre---------------------- */
-    const genre_options = {
+  }, []);
+  /* -----------------------fetch genre---------------------- */
+  /*  const genre_options = {
       method: "GET",
       headers: {
         accept: "application/json",
         Authorization:
           "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNmY0NzQ2NmFhYmIwNjY2N2Q1ZTE1YTNlZDhlNzdhOSIsInN1YiI6IjY0NThhYmFmMTU2Y2M3MDE1ZTc2Y2MwZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.POw3YsVvhBejuI-xAT8xvwV9QKg8QSoCARfQzH76uhY",
       },
-    };
+    }; */
 
-    fetch(
+  /*  fetch(
       "https://api.themoviedb.org/3/genre/movie/list?language=en",
       genre_options
     )
       .then((response) => response.json())
       .then((response) => console.log(response))
       .catch((err) => console.error(err));
-  }, []); //dependency array, defines dependency for the effect- til formål at den kun opdateres ved initial render.
+  }, []); //dependency array, defines dependency for the effect- til formål at den kun opdateres ved initial render. */
   return (
     <>
       <header className="padding bg-white dark:bg-black">
