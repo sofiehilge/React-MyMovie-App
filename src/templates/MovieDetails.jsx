@@ -58,12 +58,6 @@ const MovieDetails = () => {
       </StyledFlexbox>
       <MovieRating />
       <StyledThemeContainer>
-        {/* {data.genre_ids.map((movieGenreId) => (
-                  <ThemeItem
-                    key={movieGenreId}
-                    title={getGenreNameById(movieGenreId, MovieCardData.genre)}
-                  />
-                ))}  */}
         {movie.genres.map((movieGenreName, index) => (
           <ThemeItem key={index} title={movieGenreName.name} />
         ))}

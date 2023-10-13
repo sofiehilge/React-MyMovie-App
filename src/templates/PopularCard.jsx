@@ -28,9 +28,9 @@ const PopularCard = () => {
   const MovieCardData = useLoaderData();
 
   function getGenreNameById(movieGenreId, genres) {
-    const genre = genres.find((genre) => genre.id === movieGenreId);
+    const genreMatch = genres.find((genre) => genre.id === movieGenreId);
 
-    return genre ? genre.name : "Ukendt genre";
+    return genreMatch ? genreMatch.name : "Ukendt genre";
   }
 
   return (
